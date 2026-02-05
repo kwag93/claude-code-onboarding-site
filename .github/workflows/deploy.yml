@@ -1,0 +1,71 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  # main 브랜치에 push될 때 자동 배포
+  push:
+    branches:
+      - main
+  # 수동 실행 가능 (버전 입력 받음)
+  workflow_dispatch:
+    inputs:
+      version:
+        description: '배포할 버전 (예: v1.0, v1.1)'
+        required: true
+        default: 'latest'
+
+# GitHub Pages에 배포하기 위한 권한
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # mike가 git 히스토리를 사용하므로 전체 히스토리 필요
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy with mike
+        run: |
+          # workflow_dispatch로 실행되면 입력받은 버전 사용
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+            echo "📦 수동 배포: 버전 $VERSION"
+            mike deploy --push --update-aliases $VERSION latest
+            mike set-default --push latest
+          else
+            # push 이벤트면 latest로 배포
+            echo "📦 자동 배포: latest"
+            mike deploy --push --update-aliases latest
+            mike set-default --push latest
+          fi
+
+      - name: Deploy result
+        run: |
+          echo "✅ 배포 완료!"
+          echo "🌐 사이트 URL: https://kwag93.github.io/claude-code-onboarding-site/"
