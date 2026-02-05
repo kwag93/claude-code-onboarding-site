@@ -1,0 +1,19 @@
+# VS Code 히스토리
+.history/
+
+# OMC (oh-my-claudecode) 관련
+.omc/
+
+# Python 관련
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# MkDocs 빌드 결과
+site/
+
+# OS 관련
+.DS_Store
+Thumbs.db

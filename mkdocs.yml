@@ -1,0 +1,111 @@
+# 프로젝트 정보
+site_name: Claude Code 온보딩 가이드
+site_description: AI 페어 프로그래밍으로 개발 생산성을 높이기 위한 팀 온보딩 문서
+site_author: CLOBOT
+site_url: https://your-username.github.io/claude-code-onboarding/
+
+# 저장소 정보
+repo_name: claude-code-onboarding
+repo_url: https://github.com/your-username/claude-code-onboarding
+edit_uri: edit/main/docs/
+
+# 테마 설정
+theme:
+  name: material
+  language: ko
+  palette:
+    # 라이트 모드
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: 다크 모드로 전환
+    # 다크 모드
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: 라이트 모드로 전환
+  font:
+    text: Noto Sans KR
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+# 네비게이션
+nav:
+  - 홈: index.md
+  - 시작하기:
+      - 빠른 시작: 01-quick-start.md
+      - AI 마인드셋: 02-ai-mindset.md
+  - 실무 가이드:
+      - 워크플로우: 03-workflows.md
+      - 나아가는 방법: 04-evolving.md
+  - 팁:
+      - 요청하는 방법: 05-prompt-tips.md
+
+# 확장 기능
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+# 플러그인
+plugins:
+  - search:
+      lang:
+        - ko
+        - en
+  - mike:
+      version_selector: true
+      css_dir: css
+      javascript_dir: js
+      canonical_version: null
+
+# 추가 CSS
+extra_css:
+  - stylesheets/extra.css
+
+# 추가 설정
+extra:
+  version:
+    provider: mike
+    default: latest
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-username
+  generator: false
+
+# 저작권
+copyright: Copyright &copy; 2026 CLOBOT - Claude Code Onboarding Guide
