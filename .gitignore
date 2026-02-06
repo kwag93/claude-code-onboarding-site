@@ -9,6 +9,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 venv/
+.venv/
 .env
 
 # MkDocs 빌드 결과

@@ -16,7 +16,7 @@ AI에게 효과적으로 요청하는 방법입니다.
 
 ---
 
-## Show, Don't Tell
+## 보여주고, 설명은 줄이기
 
 > **좋은 예시 하나가 긴 설명보다 낫다**
 >
@@ -240,5 +240,5 @@ create_order, create_product도 같은 패턴으로
 
 ## 참고 자료
 
-- [Prompting 101: Show, don't tell](https://www.haskellforall.com/2026/01/prompting-101-show-dont-tell.html) - Gabriella Gonzalez
+- [프롬프팅 101: 보여주고 설명은 줄이기](https://www.haskellforall.com/2026/01/prompting-101-show-dont-tell.html) - Gabriella Gonzalez
 - [How AI assistance impacts coding skills](https://www.anthropic.com/research/AI-assistance-coding-skills) - Anthropic Research

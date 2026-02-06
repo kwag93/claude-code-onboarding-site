@@ -2,7 +2,7 @@
 
 Claude Code를 설치하고 최적의 환경을 구성하는 방법입니다.
 
-## Step 1: Claude Code 설치
+## 1단계: Claude Code 설치
 
 ### macOS / Linux
 
@@ -16,7 +16,7 @@ npm install -g @anthropic-ai/claude-code
 claude --version
 ```
 
-## Step 2: 공식 문서 참조
+## 2단계: 공식 문서 참조
 
 > **Tip**: 공식 문서를 직접 읽을 필요는 없습니다.
 > Claude에게 "이 문서 읽고 요약해줘"라고 던지면 됩니다.
@@ -30,7 +30,7 @@ https://code.claude.com/docs/en/overview
 
 ---
 
-## Step 3: oh-my-claudecode 플러그인 설치 (강력 추천)
+## 3단계: oh-my-claudecode 플러그인 설치 (강력 추천)
 
 [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode)는 Claude Code를 **멀티 에이전트 오케스트레이션 플랫폼**으로 확장하는 플러그인입니다.
 
@@ -70,7 +70,7 @@ https://code.claude.com/docs/en/overview
 
 ---
 
-## Step 4: MCP 설정
+## 4단계: MCP 설정
 
 ### oh-my-claudecode 사용 시
 
@@ -110,7 +110,7 @@ FastAPI 0.115 버전의 변경사항 알려줘
 
 ---
 
-## Step 5: 프로젝트 설정 (CLAUDE.md)
+## 5단계: 프로젝트 설정 (CLAUDE.md)
 
 프로젝트 루트에 `CLAUDE.md` 파일을 생성하면 Claude가 컨텍스트를 더 잘 이해합니다.
 
@@ -159,7 +159,7 @@ FastAPI 0.115 버전의 변경사항 알려줘
 
 ---
 
-**Sources**:
+**참고 자료**:
 
 - [oh-my-claudecode GitHub](https://github.com/Yeachan-Heo/oh-my-claudecode)
 - [Claude Code 공식 문서](https://code.claude.com/docs/en/overview)

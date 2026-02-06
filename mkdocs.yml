@@ -53,9 +53,12 @@ nav:
       - AI 마인드셋: 02-ai-mindset.md
   - 실무 가이드:
       - 워크플로우: 03-workflows.md
+      - 에이전트 팀과 코워크: 06-agent-teams-cowork.md
       - 나아가는 방법: 04-evolving.md
   - 팁:
       - 요청하는 방법: 05-prompt-tips.md
+  - 업데이트:
+      - 문서 업데이트 내역: 99-release-notes.md
 
 # 확장 기능
 markdown_extensions:

@@ -23,12 +23,12 @@ Claude Code는 단순한 대화 도구가 아닙니다.
 
 ---
 
-## 예제: SPOT SDK 서브에이전트 만들기
+## 예제: 스팟(SPOT) SDK 서브에이전트 만들기
 
-Boston Dynamics의 SPOT 로봇 SDK를 다루는 전문 에이전트를 만들어봅시다.
+Boston Dynamics의 스팟(SPOT) 로봇 SDK를 다루는 전문 에이전트를 만들어봅시다.
 이 예제를 통해 **지식 베이스 구축 → 스킬/에이전트 생성**의 전체 과정을 익힐 수 있습니다.
 
-### Step 1: 지식 소스 수집
+### 1단계: 지식 소스 수집
 
 먼저 AI에게 필요한 자료들을 제공합니다.
 
@@ -49,7 +49,7 @@ SPOT SDK 개발을 도와줄 전문 에이전트를 만들려고 해.
    https://dev.bostondynamics.com/protos/bosdyn/api/proto_reference
 ```
 
-### Step 2: Wishful Thinking으로 요구사항 정의
+### 2단계: 위시풀 싱킹(Wishful Thinking)으로 요구사항 정의
 
 > **Wishful Thinking**: 이상적으로 어떤 동작을 원하는지 먼저 상상하고,
 > 그것을 AI에게 설명하는 방식입니다.
@@ -65,7 +65,7 @@ SPOT SDK 개발을 도와줄 전문 에이전트를 만들려고 해.
 이런 동작을 하려면 어떤 스킬과 훅이 필요할까?
 ```
 
-### Step 3: 필요한 지식 추가 요청
+### 3단계: 필요한 지식 추가 요청
 
 AI가 분석한 후 추가 정보가 필요하면 알려줍니다.
 
@@ -77,7 +77,7 @@ Claude: "현재 사용 중인 SDK 버전과 타겟 버전이 필요합니다.
 > 우리 코드는 여기 있어: [GitHub 링크 또는 로컬 경로]
 ```
 
-### Step 4: 스킬/에이전트 생성
+### 4단계: 스킬/에이전트 생성
 
 충분한 정보가 모이면 실제 구현을 요청합니다.
 
@@ -167,14 +167,24 @@ Claude: "릴리즈 노트 확인 결과:
 
 ---
 
+## 최신 기능으로 확장하기
+
+기본 서브에이전트 패턴이 익숙해졌다면, 2026년 업데이트된 **에이전트 팀**과 **코워크**를 함께 사용해 병렬 작업 효율을 높일 수 있습니다.
+
+- 에이전트 팀: 여러 역할의 에이전트를 한 팀으로 구성해 한 번에 작업 위임
+- 코워크: 대화와 별도로 장시간 작업을 백그라운드로 실행
+- 오푸스 4.6: 코딩/분석/문서 작업 품질 향상
+
+실무 적용 절차와 엑셀/파워포인트 예시는 다음 문서에서 다룹니다.
+
 ## 다음 단계
 
-워크플로우 구축 방법을 익혔다면 [04. 나아가는 방법](./04-evolving.md)에서 지속적으로 시스템을 개선하는 방법을 알아보세요.
+워크플로우 구축 방법을 익혔다면 [06. 에이전트 팀과 코워크](./06-agent-teams-cowork.md)에서 최신 협업 기능을 확인해보세요.
 
 ---
 
-**Sources**:
+**참고 자료**:
 
 - [Boston Dynamics Developer Portal](https://dev.bostondynamics.com/)
-- [SPOT SDK Release Notes](https://dev.bostondynamics.com/docs/release_notes)
-- [Proto Style Guide](https://dev.bostondynamics.com/docs/protos/style_guide)
+- [SPOT SDK 릴리즈 노트](https://dev.bostondynamics.com/docs/release_notes)
+- [프로토 스타일 가이드](https://dev.bostondynamics.com/docs/protos/style_guide)

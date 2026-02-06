@@ -117,8 +117,7 @@ AI를 "일 시키는 도구"가 아닌 "탐색하는 파트너"로 생각하세�
 
 ### 기억할 것
 
-> **AI-enhanced productivity is not a shortcut to competence.**
-> AI가 제공하는 생산성 향상이 곧 역량 향상을 의미하지는 않습니다.
+> **AI가 제공하는 생산성 향상은 곧 역량 향상을 의미하지 않습니다.**
 >
 > — Anthropic Research, 2025
 
@@ -143,7 +142,7 @@ AI를 대하는 관점이 정리되었다면 [03. 실무 워크플로우](./03-w
 
 ---
 
-**Sources**:
+**참고 자료**:
 
 - [How AI assistance impacts the formation of coding skills](https://www.anthropic.com/research/AI-assistance-coding-skills) - Anthropic Research
 - [Anthropic Study Finds AI Coding Assistants Speed Up Work But Reduce Skills](https://www.sovereignmagazine.com/education/anthropic-study-finds-ai-coding-assistants-speed-up-work-but-reduce-skills/)
