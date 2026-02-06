@@ -222,6 +222,6 @@ Claude Code와 Claude Desktop의 최신 협업 기능을 실제 업무 관점에
 - [코워크 연구 미리보기 블로그](https://claude.com/blog/cowork-research-preview)
 - [코워크 시작하기 (지원 문서)](https://support.claude.com/ko/articles/13345190-cowork-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)
 - [Claude Opus 4.6 공개](https://www.anthropic.com/news/claude-opus-4-6)
-- [엑셀에서 Claude 시작하기](https://support.claude.com/ko/articles/13523371-%EC%97%91%EC%85%80%EC%97%90%EC%84%9C-claude-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)
-- [파워포인트에서 Claude 시작하기](https://support.claude.com/en/articles/13521390-getting-started-with-claude-in-powerpoint)
+- [엑셀에서 Claude 시작하기](https://support.claude.com/ko/articles/12650343-excel%EC%9D%98-claude)
+- [파워포인트에서 Claude 시작하기](https://support.claude.com/en/articles/13521390-using-claude-in-powerpoint)
 - [Claude 4.6 변경 사항 (개발자 문서)](https://platform.claude.com/docs/ko/about-claude/models/whats-new-claude-4-6)
