@@ -1,29 +1,96 @@
-/* 한국어 폰트 개선 */
+/* 가독성 중심 타이포그래피 */
 :root {
-  --md-text-font: 'Noto Sans KR', sans-serif;
+  --md-text-font: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --md-code-font: 'JetBrains Mono', 'D2Coding', 'SFMono-Regular', Menlo, Consolas, monospace;
 }
 
-/* 코드 블록 스타일 */
+/* 본문 크기/줄간격: 긴 문장도 읽기 쉬운 밀도로 조정 */
+.md-typeset {
+  font-size: clamp(0.98rem, 0.95rem + 0.18vw, 1.05rem);
+  line-height: 1.72;
+  letter-spacing: 0.01em;
+}
+
+/* 한 줄 길이 제한(Measure): 과도하게 긴 줄 방지 */
+.md-content__inner {
+  max-width: 72ch;
+  margin-inline: auto;
+}
+
+.md-typeset p,
+.md-typeset li,
+.md-typeset td,
+.md-typeset th,
+.md-typeset blockquote {
+  line-height: 1.72;
+}
+
+.md-typeset p {
+  margin-block: 0 0.95em;
+}
+
+.md-typeset ul,
+.md-typeset ol {
+  margin-block: 0.6em 1em;
+}
+
+.md-typeset li + li {
+  margin-top: 0.35em;
+}
+
+/* 제목 계층 대비 강화 */
+.md-typeset h1 {
+  font-size: clamp(1.9rem, 1.7rem + 0.9vw, 2.35rem);
+  line-height: 1.28;
+  margin-bottom: 0.7em;
+  font-weight: 700;
+}
+
+.md-typeset h2 {
+  font-size: clamp(1.42rem, 1.25rem + 0.45vw, 1.75rem);
+  line-height: 1.34;
+  margin-top: 1.5em;
+  margin-bottom: 0.55em;
+}
+
+.md-typeset h3 {
+  font-size: clamp(1.18rem, 1.08rem + 0.32vw, 1.35rem);
+  line-height: 1.42;
+  margin-top: 1.3em;
+  margin-bottom: 0.45em;
+}
+
+/* 코드/표는 본문 대비 지나치게 작지 않게 유지 */
 .md-typeset code {
-  font-size: 0.85em;
+  font-size: 0.92em;
 }
 
-/* 테이블 스타일 개선 */
+.md-typeset pre > code {
+  font-size: 0.88em;
+  line-height: 1.6;
+}
+
 .md-typeset table:not([class]) {
-  font-size: 0.9em;
+  font-size: 0.96em;
+  line-height: 1.65;
+}
+
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  padding: 0.65em 0.8em;
 }
 
 .md-typeset table:not([class]) th {
-  background-color: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
+  background-color: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color);
 }
 
-/* 인용구 스타일 */
+/* 인용구 강조는 유지하되 대비를 완화 */
 .md-typeset blockquote {
   border-left: 4px solid var(--md-accent-fg-color);
   background-color: var(--md-code-bg-color);
-  padding: 1em;
-  margin: 1em 0;
+  padding: 0.95em 1.1em;
+  margin: 1.1em 0;
 }
 
 /* 체크리스트 스타일 */
@@ -36,12 +103,28 @@
   font-weight: 500;
 }
 
-/* 홈 페이지 히어로 섹션 */
-.md-typeset h1 {
-  font-weight: 700;
+/* 네비게이션 글자 크기 보강 */
+.md-nav__link {
+  font-size: 0.96rem;
+  line-height: 1.45;
 }
 
-/* 네비게이션 개선 */
-.md-nav__link {
-  font-size: 0.9rem;
+/* 모바일에서 본문 축소 방지 */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset {
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+
+  .md-typeset h1 {
+    font-size: clamp(1.65rem, 1.45rem + 1.6vw, 2rem);
+  }
+
+  .md-typeset h2 {
+    font-size: clamp(1.28rem, 1.12rem + 1vw, 1.48rem);
+  }
+
+  .md-nav__link {
+    font-size: 0.98rem;
+  }
 }
