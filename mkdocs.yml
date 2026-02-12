@@ -2,11 +2,11 @@
 site_name: Claude Code 온보딩 가이드
 site_description: AI 페어 프로그래밍으로 개발 생산성을 높이기 위한 팀 온보딩 문서
 site_author: CLOBOT
-site_url: https://your-username.github.io/claude-code-onboarding/
+site_url: https://kwag93.github.io/claude-code-onboarding-site/
 
 # 저장소 정보
-repo_name: claude-code-onboarding
-repo_url: https://github.com/your-username/claude-code-onboarding
+repo_name: claude-code-onboarding-site
+repo_url: https://github.com/kwag93/claude-code-onboarding-site
 edit_uri: edit/main/docs/
 
 # 테마 설정
@@ -33,15 +33,19 @@ theme:
     code: JetBrains Mono
   features:
     - navigation.instant
+    - navigation.instant.progress
     - navigation.tracking
     - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.footer
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
     - content.code.annotate
+    - content.tabs.link
   icon:
     repo: fontawesome/brands/github
 
@@ -90,6 +94,7 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+      toc_depth: 3
 
 # 플러그인
 plugins:
@@ -114,7 +119,7 @@ extra:
     default: latest
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/your-username
+      link: https://github.com/kwag93/claude-code-onboarding-site
   generator: false
 
 # 저작권

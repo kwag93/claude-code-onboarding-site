@@ -19,27 +19,27 @@ AI 페어 프로그래밍으로 개발 생산성을 높이기 위한 팀 온보�
 
 ### 시작하기
 
-1. [빠른 시작](./01-quick-start.md): 설치, oh-my-claudecode, MCP 설정 (10분)
-2. [AI 마인드셋](./02-ai-mindset.md): 도서관 사서 비유, 인지 오프로딩 위험 (10분)
+- [01. 빠른 시작](./01-quick-start.md): 설치, oh-my-claudecode, MCP 설정 (10분)
+- [02. AI 마인드셋](./02-ai-mindset.md): 도서관 사서 비유, 인지 오프로딩 위험 (10분)
 
 ### 실무 가이드
 
-3. [실무 워크플로우](./03-workflows.md): 에이전트/스킬/훅, 스팟 SDK 예제 (20분)
-4. [에이전트 팀과 코워크](./06-agent-teams-cowork.md): 팀 조율, 코워크 실전 예시, 토큰 비용 (20분)
-5. [왜 CLI인가](./07-why-cli.md): CLI 장점, 이미지 활용, 멀티 인스턴스 (10분)
-6. [OMC 활용 가이드](./08-omc-guide.md): autopilot, learner, HUD, 실행 모드 (15분)
-7. [자동화의 힘](./09-automation.md): git, PR, 테스트, 코드 리뷰 자동화 (15분)
+- [03. 실무 워크플로우](./03-workflows.md): 에이전트/스킬/훅, 스팟 SDK 예제 (20분)
+- [06. 에이전트 팀과 코워크](./06-agent-teams-cowork.md): 팀 조율, 코워크 실전 예시, 토큰 비용 (20분)
+- [07. 왜 CLI인가](./07-why-cli.md): CLI 장점, 이미지 활용, 멀티 인스턴스 (10분)
+- [08. OMC 활용 가이드](./08-omc-guide.md): autopilot, learner, HUD, 실행 모드 (15분)
+- [09. 자동화의 힘](./09-automation.md): git, PR, 테스트, 코드 리뷰 자동화 (15분)
 
 ### 확장하기
 
-8. [MCP 생태계](./10-mcp-ecosystem.md): Context7, Figma MCP, Jira MCP (15분)
-9. [스킬과 플러그인](./11-skills-plugins.md): humanizer, 직접 만들기, 서브에이전트 (15분)
+- [10. MCP 생태계](./10-mcp-ecosystem.md): Context7, Figma MCP, Jira MCP (15분)
+- [11. 스킬과 플러그인](./11-skills-plugins.md): humanizer, 직접 만들기, 서브에이전트 (15분)
 
 ### 철학
 
-10. [AI와 함께 일하는 방법](./12-ai-work-philosophy.md): 찾지 말고 물어보기, 메모리 관리 (10분)
-11. [나아가는 방법](./04-evolving.md): 메모리, 룰, 스킬 업데이트 (10분)
-12. [요청하는 방법](./05-prompt-tips.md): 보여주기 중심 요청법 (10분)
+- [12. AI와 함께 일하는 방법](./12-ai-work-philosophy.md): 찾지 말고 물어보기, 메모리 관리 (10분)
+- [04. 나아가는 방법](./04-evolving.md): 메모리, 룰, 스킬 업데이트 (10분)
+- [05. 요청하는 방법](./05-prompt-tips.md): 보여주기 중심 요청법 (10분)
 
 **총 소요시간**: 약 2시간 30분
 

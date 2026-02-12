@@ -50,18 +50,34 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Deploy with mike
+      - name: Extract version from release notes
+        id: version
         run: |
-          # workflow_dispatch로 실행되면 입력받은 버전 사용
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            VERSION="${{ github.event.inputs.version }}"
-            echo "📦 수동 배포: 버전 $VERSION"
-            mike deploy --push --update-aliases $VERSION latest
+          # release-notes.md에서 최신 버전 번호 추출 (예: v1.2.0)
+          VERSION=$(grep -oP '## v\K[0-9]+\.[0-9]+\.[0-9]+' docs/99-release-notes.md | head -1)
+          if [ -z "$VERSION" ]; then
+            VERSION="0.0.0"
+          fi
+          # mike용 단축 버전 (v1.2)
+          SHORT_VERSION="v$(echo $VERSION | cut -d. -f1,2)"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "short_version=$SHORT_VERSION" >> $GITHUB_OUTPUT
+          echo "📋 추출된 버전: v$VERSION (별칭: $SHORT_VERSION)"
+
+      - name: Deploy with mike
+        env:
+          INPUT_VERSION: ${{ github.event.inputs.version }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            echo "📦 수동 배포: 버전 $INPUT_VERSION"
+            mike deploy --push --update-aliases "$INPUT_VERSION" latest
             mike set-default --push latest
           else
-            # push 이벤트면 latest로 배포
-            echo "📦 자동 배포: latest"
-            mike deploy --push --update-aliases latest
+            SHORT_VERSION="${{ steps.version.outputs.short_version }}"
+            FULL_VERSION="v${{ steps.version.outputs.version }}"
+            echo "📦 자동 배포: $SHORT_VERSION ($FULL_VERSION) + latest"
+            mike deploy --push --update-aliases "$SHORT_VERSION" latest --title "$SHORT_VERSION ($FULL_VERSION)"
             mike set-default --push latest
           fi
 
