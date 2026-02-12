@@ -64,6 +64,14 @@ jobs:
           echo "short_version=$SHORT_VERSION" >> $GITHUB_OUTPUT
           echo "📋 추출된 버전: v$VERSION (별칭: $SHORT_VERSION)"
 
+      - name: Clean stale latest version
+        run: |
+          # 기존에 'latest'가 버전 이름으로 존재하면 삭제 (alias 충돌 방지)
+          if mike list | grep -q "^latest"; then
+            echo "🧹 기존 latest 버전 삭제"
+            mike delete --push latest || true
+          fi
+
       - name: Deploy with mike
         env:
           INPUT_VERSION: ${{ github.event.inputs.version }}
