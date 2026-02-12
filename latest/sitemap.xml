@@ -2,34 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://your-username.github.io/claude-code-onboarding/latest/</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://your-username.github.io/claude-code-onboarding/latest/01-quick-start/</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://your-username.github.io/claude-code-onboarding/latest/02-ai-mindset/</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://your-username.github.io/claude-code-onboarding/latest/03-workflows/</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://your-username.github.io/claude-code-onboarding/latest/04-evolving/</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://your-username.github.io/claude-code-onboarding/latest/05-prompt-tips/</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://your-username.github.io/claude-code-onboarding/latest/06-agent-teams-cowork/</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/claude-code-onboarding/latest/07-why-cli/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/claude-code-onboarding/latest/08-omc-guide/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/claude-code-onboarding/latest/09-automation/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/claude-code-onboarding/latest/10-mcp-ecosystem/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/claude-code-onboarding/latest/11-skills-plugins/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/claude-code-onboarding/latest/12-ai-work-philosophy/</loc>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://your-username.github.io/claude-code-onboarding/latest/99-release-notes/</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
 </urlset>

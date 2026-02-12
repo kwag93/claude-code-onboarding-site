@@ -12,13 +12,13 @@
         <meta name="author" content="CLOBOT">
       
       
-        <link rel="canonical" href="https://your-username.github.io/claude-code-onboarding/latest/04-evolving/">
+        <link rel="canonical" href="https://your-username.github.io/claude-code-onboarding/latest/09-automation/">
       
       
-        <link rel="prev" href="../12-ai-work-philosophy/">
+        <link rel="prev" href="../08-omc-guide/">
       
       
-        <link rel="next" href="../05-prompt-tips/">
+        <link rel="next" href="../10-mcp-ecosystem/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>나아가는 방법 - Claude Code 온보딩 가이드</title>
+        <title>자동화의 힘 - Claude Code 온보딩 가이드</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#04" class="md-skip">
+        <a href="#09" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              나아가는 방법
+              자동화의 힘
             
           </span>
         </div>
@@ -270,10 +270,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../03-workflows/" class="md-tabs__link">
           
   
@@ -310,12 +312,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../12-ai-work-philosophy/" class="md-tabs__link">
           
   
@@ -541,28 +541,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -580,7 +583,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -707,10 +710,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../09-automation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    자동화의 힘
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -726,6 +756,337 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        무엇을 자동화할 수 있는가?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-git-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Git Commit 자동화
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Git Commit 자동화">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기본 사용
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실제 동작 예시
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        커밋 + 푸시 + PR 한 번에
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. PR 자동화
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. PR 자동화">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pr_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR 생성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR 리뷰
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 테스트 자동화
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 테스트 자동화">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TDD 모드
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qa-ultraqa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QA 사이클 (ultraqa)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        테스트 커버리지 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 코드 리뷰 자동화
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 코드 리뷰 자동화">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        전체 리뷰
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        보안 리뷰만 실행
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 빌드 에러 자동 수정
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 병렬 CLI 활용
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 병렬 CLI 활용">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        독립 작업 병렬 처리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        비대화형 모드로 스크립트 자동화
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#omc-ultrawork" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OMC의 ultrawork 모드
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자동화 조합 예시
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="자동화 조합 예시">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        일일 개발 루틴
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        레거시 코드 개선
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실천 체크리스트
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        다음 단계
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -859,31 +1220,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -901,7 +1259,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -944,37 +1302,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    나아가는 방법
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../04-evolving/" class="md-nav__link">
         
   
   
@@ -990,298 +1321,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="목차">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      목차
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        핵심 원칙
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        개선 루프: 문제 → 피드백 → 업데이트
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="개선 루프: 문제 → 피드백 → 업데이트">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1단계: 문제 인식
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2단계: 명시적 피드백
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3단계: 영구 저장 (메모리/룰/스킬)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        업데이트 대상별 가이드
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="업데이트 대상별 가이드">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-claudemd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. CLAUDE.md (프로젝트 룰)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 메모리 (프로젝트 기억)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 스킬 (반복 작업)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 훅 (자동 실행)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        실전 개선 시나리오
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="실전 개선 시나리오">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        시나리오 1: 반복되는 실수
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        시나리오 2: 팀 컨벤션 누락
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        시나리오 3: 버전 호환성
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        개선 체크리스트
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="개선 체크리스트">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        주간 점검
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        월간 점검
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        팀 공유
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="팀 공유">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        팀 온보딩에 활용
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        기억해야 할 것
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#learner" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        learner로 자동 개선하기
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        다음 단계
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1441,7 +1480,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        핵심 원칙
+        무엇을 자동화할 수 있는가?
       
     </span>
   </a>
@@ -1449,22 +1488,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1-git-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Git Commit 자동화
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Git Commit 자동화">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개선 루프: 문제 → 피드백 → 업데이트
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="개선 루프: 문제 → 피드백 → 업데이트">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1단계: 문제 인식
+        기본 사용
       
     </span>
   </a>
@@ -1472,49 +1511,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2단계: 명시적 피드백
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3단계: 영구 저장 (메모리/룰/스킬)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        업데이트 대상별 가이드
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="업데이트 대상별 가이드">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-claudemd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. CLAUDE.md (프로젝트 룰)
+        실제 동작 예시
       
     </span>
   </a>
@@ -1522,32 +1522,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
+  <a href="#pr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 메모리 (프로젝트 기억)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 스킬 (반복 작업)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 훅 (자동 실행)
+        커밋 + 푸시 + PR 한 번에
       
     </span>
   </a>
@@ -1560,44 +1538,83 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#2-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. PR 자동화
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. PR 자동화">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pr_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR 생성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR 리뷰
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 테스트 자동화
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 테스트 자동화">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TDD 모드
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qa-ultraqa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QA 사이클 (ultraqa)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        실전 개선 시나리오
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="실전 개선 시나리오">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        시나리오 1: 반복되는 실수
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        시나리오 2: 팀 컨벤션 누락
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        시나리오 3: 버전 호환성
+        테스트 커버리지 확인
       
     </span>
   </a>
@@ -1610,61 +1627,94 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개선 체크리스트
+        4. 코드 리뷰 자동화
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="개선 체크리스트">
+    <nav class="md-nav" aria-label="4. 코드 리뷰 자동화">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        전체 리뷰
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        주간 점검
+        보안 리뷰만 실행
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 빌드 에러 자동 수정
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 병렬 CLI 활용
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 병렬 CLI 활용">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        월간 점검
+        독립 작업 병렬 처리
       
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        팀 공유
+        비대화형 모드로 스크립트 자동화
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="팀 공유">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#omc-ultrawork" class="md-nav__link">
     <span class="md-ellipsis">
       
-        팀 온보딩에 활용
+        OMC의 ultrawork 모드
       
     </span>
   </a>
@@ -1677,21 +1727,49 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자동화 조합 예시
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="자동화 조합 예시">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       
-        기억해야 할 것
+        일일 개발 루틴
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#learner" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       
-        learner로 자동 개선하기
+        레거시 코드 개선
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실천 체크리스트
       
     </span>
   </a>
@@ -1699,7 +1777,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       
         다음 단계
@@ -1729,180 +1807,222 @@
   
 
 
-<h1 id="04">04. 나아가는 방법<a class="headerlink" href="#04" title="Permanent link">&para;</a></h1>
-<p>Claude Code를 쓸수록 점점 나아지는 시스템을 만드는 방법입니다.</p>
+<h1 id="09">09. 자동화의 힘<a class="headerlink" href="#09" title="Permanent link">&para;</a></h1>
+<p>Claude Code로 자동화할 수 있는 것들과 그 방법이에요.</p>
 <hr />
-<h2 id="_1">핵심 원칙<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p><strong>사용할수록 AI의 타겟 적중률이 올라간다</strong></p>
-</blockquote>
-<p>처음에는 AI가 내 의도를 잘 못 맞출 수 있습니다.
-근데 <strong>피드백을 주면</strong> 갈수록 정확해져요.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[첫 사용] → AI가 70% 정도 맞춤
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ↓
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[피드백 + 룰 업데이트]
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    ↓
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>[한 달 후] → AI가 90% 이상 맞춤
+<h2 id="_1">무엇을 자동화할 수 있는가?<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Claude Code는 단순 코드 생성 도구가 아닙니다.
+<strong>개발하면서 하는 일 전체</strong>를 자동화할 수 있어요.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>코드 작성 → 테스트 → 리뷰 → 커밋 → PR → 배포
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ↑         ↑       ↑       ↑      ↑
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    모든 단계를 Claude Code가 도와줍니다
 </span></code></pre></div>
 <hr />
-<h2 id="_2">개선 루프: 문제 → 피드백 → 업데이트<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="1">1단계: 문제 인식<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p>AI가 자꾸 틀리는 패턴을 발견합니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>예시:
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>- &quot;매번 PostgreSQL 문법을 MySQL로 잘못 써&quot;
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>- &quot;우리 팀 컨벤션을 계속 무시해&quot;
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>- &quot;특정 라이브러리 버전을 자꾸 헷갈려&quot;
+<h2 id="1-git-commit">1. Git Commit 자동화<a class="headerlink" href="#1-git-commit" title="Permanent link">&para;</a></h2>
+<h3 id="_2">기본 사용<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/commit
 </span></code></pre></div>
-<h3 id="2">2단계: 명시적 피드백<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<p>문제를 Claude에게 명확히 알려줍니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&gt; 아까 그 SQL 쿼리, PostgreSQL 문법이 아니라 MySQL 문법이었어.
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&gt; 앞으로 PostgreSQL만 사용해야 해.
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&gt; 이걸 기억해둘 수 있어?
+<p>이 한 줄이면:
+1. 변경된 파일 분석
+2. 변경 내용에 맞는 커밋 메시지 자동 생성 (Conventional Commits)
+3. 사용자 확인 후 커밋</p>
+<h3 id="_3">실제 동작 예시<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&gt; /commit
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Claude: &quot;변경 사항을 분석했습니다:
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>- src/auth/login.ts: JWT 검증 로직 추가
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>- src/auth/login.test.ts: 테스트 케이스 3개 추가
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>제안 커밋 메시지:
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>feat(auth): JWT 토큰 검증 로직 및 테스트 추가
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>이 메시지로 커밋할까요?&quot;
 </span></code></pre></div>
-<h3 id="3">3단계: 영구 저장 (메모리/룰/스킬)<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<p>피드백을 시스템에 박아둡니다.</p>
+<h3 id="pr">커밋 + 푸시 + PR 한 번에<a class="headerlink" href="#pr" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/commit-push-pr
+</span></code></pre></div>
+<p>커밋부터 PR 생성까지 <strong>한 번에</strong> 처리합니다.</p>
 <hr />
-<h2 id="_3">업데이트 대상별 가이드<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="1-claudemd">1. CLAUDE.md (프로젝트 룰)<a class="headerlink" href="#1-claudemd" title="Permanent link">&para;</a></h3>
-<p>프로젝트 전체에 적용되는 규칙</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gh"># CLAUDE.md에 추가</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="gu">## 데이터베이스 규칙</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">-</span><span class="w"> </span>PostgreSQL만 사용 (MySQL 문법 사용 금지)
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">-</span><span class="w"> </span>테이블명은 snake_case, 복수형 (users, orders)
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">-</span><span class="w"> </span>timestamp 컬럼은 항상 timezone 포함
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="gu">## 금지 사항</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="k">-</span><span class="w"> </span>SELECT \* 사용 금지
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="k">-</span><span class="w"> </span>인덱스 없는 WHERE 절 금지
+<h2 id="2-pr">2. PR 자동화<a class="headerlink" href="#2-pr" title="Permanent link">&para;</a></h2>
+<h3 id="pr_1">PR 생성<a class="headerlink" href="#pr_1" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&gt; 지금까지 작업한 내용으로 PR 만들어줘
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Claude:
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>- 브랜치의 모든 커밋 분석
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>- PR 제목 자동 생성
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>- 변경 사항 요약 작성
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>- 테스트 계획 포함
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>- gh pr create 실행
 </span></code></pre></div>
-<p><strong>업데이트 요청 예시:</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&gt; CLAUDE.md에 PostgreSQL 관련 규칙 추가해줘.
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&gt; 앞으로 MySQL 문법 쓰면 안 돼.
+<h3 id="pr_2">PR 리뷰<a class="headerlink" href="#pr_2" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&gt; 이 PR 리뷰해줘: #123
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a># 또는 OMC 사용
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>/oh-my-claudecode:code-review
 </span></code></pre></div>
-<h3 id="2_1">2. 메모리 (프로젝트 기억)<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
-<p>AI가 기억해야 할 컨텍스트</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&gt; 이 프로젝트에서 user_service.py는 절대 건드리면 안 돼.
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>&gt; 레거시 코드라서 영향 범위가 너무 커.
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&gt; 이거 기억해둬.
-</span></code></pre></div>
-<p>Claude가 메모리에 저장:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>[Memory: user_service.py 수정 금지 - 레거시 코드, 영향 범위 큼]
-</span></code></pre></div>
-<h3 id="3_1">3. 스킬 (반복 작업)<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
-<p>자주 하는 작업을 스킬로 만들기</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&gt; 매번 PR 올릴 때마다 같은 체크리스트 확인하잖아.
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>&gt; 이걸 자동으로 해주는 스킬 만들어줘.
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>&gt; PR 체크리스트 스킬:
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>&gt; 1. 테스트 커버리지 80% 이상 확인
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>&gt; 2. 린트 에러 0개 확인
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>&gt; 3. CHANGELOG.md 업데이트 여부 확인
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>&gt; 4. 관련 이슈 번호 포함 여부 확인
-</span></code></pre></div>
-<h3 id="4">4. 훅 (자동 실행)<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
-<p>특정 이벤트에 자동 실행되는 동작</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>&gt; 커밋할 때마다 테스트 돌리는 거 잊어버려.
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>&gt; pre-commit 훅으로 자동 실행되게 해줘.
-</span></code></pre></div>
+<p>자동 리뷰 항목:
+- 코드 품질 (안티패턴, 중복)
+- 보안 취약점
+- 성능 이슈
+- 테스트 커버리지
+- 스타일 가이드 준수</p>
 <hr />
-<h2 id="_4">실전 개선 시나리오<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h3 id="1_1">시나리오 1: 반복되는 실수<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>[상황] Claude가 자꾸 deprecated API 사용
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>&gt; 방금 쓴 코드에서 createUser 대신 registerUser를 써야 해.
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>&gt; createUser는 v2에서 deprecated됐어.
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>&gt; 이런 deprecated API 목록을 CLAUDE.md에 추가해줘.
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>[결과] CLAUDE.md에 deprecated API 섹션 추가
+<h2 id="3">3. 테스트 자동화<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="tdd">TDD 모드<a class="headerlink" href="#tdd" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/oh-my-claudecode:tdd
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>&gt; 사용자 인증 기능 만들어줘
 </span></code></pre></div>
-<h3 id="2_2">시나리오 2: 팀 컨벤션 누락<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>[상황] 에러 핸들링 방식이 팀 규칙과 다름
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>&gt; 우리 팀은 에러를 이렇게 처리해:
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>&gt; - 사용자 에러: UserError 클래스 사용
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>&gt; - 시스템 에러: SystemError 클래스 사용
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>&gt; - 모든 에러는 error_handler.py를 통해 처리
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>&gt;
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>&gt; 이 규칙을 스킬로 만들어서
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>&gt; 에러 핸들링 코드 작성할 때 자동으로 적용해줘.
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>[결과] error-handling-convention 스킬 생성
+<p>TDD 모드에서는:
+1. <strong>테스트를 먼저</strong> 작성 (Red)
+2. 테스트 통과하는 코드 작성 (Green)
+3. 리팩토링 (Refactor)</p>
+<h3 id="qa-ultraqa">QA 사이클 (ultraqa)<a class="headerlink" href="#qa-ultraqa" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a># 테스트 전부 통과할 때까지 반복
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>/oh-my-claudecode:ultraqa
 </span></code></pre></div>
-<h3 id="3_2">시나리오 3: 버전 호환성<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>[상황] 라이브러리 버전 혼동
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>&gt; 우리 프로젝트는 React 18.2를 써.
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>&gt; 19 버전 기능 쓰면 안 돼.
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>&gt; package.json 보고 현재 버전 확인하는 습관 들여줘.
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>&gt; 이걸 pre-code-generation 훅으로 만들어줘.
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>[결과] 코드 생성 전 package.json 버전 확인 훅 생성
+<p>동작 방식:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>테스트 실행 → 실패 발견 → 수정 → 다시 테스트 → ...
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>(최대 5 사이클, 같은 에러 3회 반복 시 중단)
+</span></code></pre></div></p>
+<h3 id="_4">테스트 커버리지 확인<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>&gt; 현재 테스트 커버리지 확인하고, 부족한 부분 테스트 추가해줘
 </span></code></pre></div>
 <hr />
-<h2 id="_5">개선 체크리스트<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>주기적으로 점검하세요:</p>
-<h3 id="_6">주간 점검<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 이번 주 AI가 반복적으로 틀린 것 있었나?</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CLAUDE.md에 추가할 규칙 있나?</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 자동화할 만한 반복 작업 있었나?</li>
-</ul>
-<h3 id="_7">월간 점검<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 현재 스킬/훅 목록 확인</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 사용하지 않는 것 정리</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 새로 필요한 것 추가</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CLAUDE.md 규칙 검토 및 정리</li>
-</ul>
-<hr />
-<h2 id="_8">팀 공유<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<p>개선한 내용은 팀과 공유하세요.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># CLAUDE.md는 git으로 관리</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>add<span class="w"> </span>CLAUDE.md
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat: PostgreSQL 규칙 및 deprecated API 목록 추가&quot;</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="c1"># 스킬은 팀 저장소에 공유</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c1"># ~/.claude/skills/ 폴더 내용을 팀 저장소로</span>
+<h2 id="4">4. 코드 리뷰 자동화<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">전체 리뷰<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>/oh-my-claudecode:code-review
 </span></code></pre></div>
-<h3 id="_9">팀 온보딩에 활용<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>새 팀원이 올 때:</p>
-<ol>
-<li>프로젝트 clone</li>
-<li><code>claude</code> 실행</li>
-<li>CLAUDE.md가 자동으로 컨텍스트 제공</li>
-<li>팀 스킬/훅이 자동으로 동작</li>
-</ol>
-<p>→ <strong>팀의 모범 사례가 자동으로 전파됨</strong></p>
-<hr />
-<h2 id="_10">기억해야 할 것<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p><strong>AI는 학습하지 않지만, 당신의 시스템은 진화한다</strong></p>
-</blockquote>
-<p>Claude는 대화가 끝나면 까먹습니다.
-대신 CLAUDE.md, 스킬, 훅 덕분에 <strong>내 환경이 점점 똑똑해지죠.</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>[당신의 피드백] → [CLAUDE.md/스킬/훅 업데이트] → [더 나은 결과]
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>                         ↑__________________________|
+<p>OMC의 코드 리뷰는 <strong>5가지 관점</strong>에서 동시에 진행됩니다:</p>
+<table>
+<thead>
+<tr>
+<th>관점</th>
+<th>에이전트</th>
+<th>확인 항목</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>스타일</td>
+<td>style-reviewer</td>
+<td>네이밍, 포맷팅, 컨벤션</td>
+</tr>
+<tr>
+<td>품질</td>
+<td>quality-reviewer</td>
+<td>로직 결함, 안티패턴, SOLID</td>
+</tr>
+<tr>
+<td>API</td>
+<td>api-reviewer</td>
+<td>계약, 호환성, 버전</td>
+</tr>
+<tr>
+<td>보안</td>
+<td>security-reviewer</td>
+<td>OWASP Top 10, 인증/인가</td>
+</tr>
+<tr>
+<td>성능</td>
+<td>performance-reviewer</td>
+<td>복잡도, 메모리, 지연</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">보안 리뷰만 실행<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>/oh-my-claudecode:security-review
 </span></code></pre></div>
-<p>꾸준히 돌리면,
-처음엔 좀 부족하던 AI가 점점 <strong>내 손에 딱 맞는 짝꿍</strong>이 됩니다.</p>
 <hr />
-<h2 id="learner">learner로 자동 개선하기<a class="headerlink" href="#learner" title="Permanent link">&para;</a></h2>
-<p>OMC의 learner 스킬을 사용하면 <strong>대화에서 자동으로 패턴을 추출</strong>해 스킬로 등록할 수 있습니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a># 대화 중 반복 패턴을 발견하면
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>/oh-my-claudecode:learner
+<h2 id="5">5. 빌드 에러 자동 수정<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>/oh-my-claudecode:build-fix
+</span></code></pre></div>
+<p>타입 에러, 빌드 실패를 <strong>최소한의 변경</strong>으로 고쳐줍니다.
+아키텍처는 안 건드리고 에러만 잡아요.</p>
+<hr />
+<h2 id="6-cli">6. 병렬 CLI 활용<a class="headerlink" href="#6-cli" title="Permanent link">&para;</a></h2>
+<h3 id="_7">독립 작업 병렬 처리<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>터미널을 여러 개 열어서 <strong>동시에 다른 일</strong>을 시킵니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a># 터미널 1
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>claude
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>&gt; 프론트엔드 로그인 페이지 만들어줘
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a># 터미널 2
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>claude
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>&gt; 백엔드 인증 API 만들어줘
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a># 터미널 3
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>claude
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>&gt; E2E 테스트 시나리오 작성해줘
+</span></code></pre></div>
+<h3 id="_8">비대화형 모드로 스크립트 자동화<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># CI/CD 파이프라인에서 활용</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>claude<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;이 PR의 변경사항 리뷰해줘&quot;</span><span class="w"> </span>--output-format<span class="w"> </span>json<span class="w"> </span>&gt;<span class="w"> </span>review.json
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a># Claude가 분석 후 스킬 제안
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a># 승인하면 자동으로 .agents/skills/에 저장
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a># 다음 세션부터 자동 활용
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># 일괄 처리</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>src/**/*.ts<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">  </span>claude<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;이 파일의 타입 안전성 검토해줘: </span><span class="nv">$file</span><span class="s2">&quot;</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="k">done</span>
 </span></code></pre></div>
-<p>직접 피드백을 입력하는 것도 중요하지만, learner를 쓰면 <strong>무의식적으로 반복하는 패턴까지</strong> 잡아낼 수 있어요.</p>
-<p>더 자세한 내용은 <a href="../08-omc-guide/">08. OMC 활용 가이드</a>의 learner 섹션을 참고하세요.</p>
+<h3 id="omc-ultrawork">OMC의 ultrawork 모드<a class="headerlink" href="#omc-ultrawork" title="Permanent link">&para;</a></h3>
+<p>CLI를 직접 여러 개 열 필요 없이, OMC가 알아서 병렬로 돌려줍니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>ulw 다음 5개 작업을 동시에 처리해줘:
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>1. UserService 리팩토링
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>2. OrderService 테스트 작성
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>3. PaymentService 타입 수정
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>4. API 문서 업데이트
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>5. E2E 테스트 추가
+</span></code></pre></div>
 <hr />
-<h2 id="_11">다음 단계<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
-<p>시스템 개선 방법을 익혔다면 <a href="../05-prompt-tips/">05. 요청하는 방법</a>에서 효과적인 커뮤니케이션 방법을 알아보세요.</p>
+<h2 id="_9">자동화 조합 예시<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="_10">일일 개발 루틴<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>[아침]
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>&gt; 어제 올라온 PR들 리뷰해줘
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>  → /oh-my-claudecode:code-review
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>[작업 중]
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>&gt; 이 기능 TDD로 만들자
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>  → /oh-my-claudecode:tdd
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>[작업 완료]
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>&gt; 커밋하고 PR 올려줘
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>  → /commit-push-pr
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>[퇴근 전]
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>&gt; 오늘 변경사항 정리해줘
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>  → 자동 요약 생성
+</span></code></pre></div>
+<h3 id="_11">레거시 코드 개선<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a># 1단계: 현재 상태 분석
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>&gt; 이 모듈 분석해줘. 의존성, 테스트 커버리지, 코드 품질.
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a># 2단계: 테스트 먼저 추가
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>&gt; 기존 동작 보존하는 테스트부터 작성해줘
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a># 3단계: 리팩토링
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>&gt; 테스트 통과 유지하면서 리팩토링해줘
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a># 4단계: 리뷰
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>&gt; /oh-my-claudecode:code-review
+</span></code></pre></div>
+<hr />
+<h2 id="_12">실천 체크리스트<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>/commit</code> 으로 커밋 메시지 자동 생성 시도</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>/oh-my-claudecode:code-review</code> 로 코드 리뷰 실행</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 터미널 2개 열고 병렬 작업 시도</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>/oh-my-claudecode:build-fix</code> 로 빌드 에러 자동 수정 체험</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 비대화형 모드 (<code>claude -p</code>) 한 번 실행해보기</li>
+</ul>
+<hr />
+<h2 id="_13">다음 단계<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p>자동화 방법을 익혔다면 <a href="../10-mcp-ecosystem/">10. MCP 생태계</a>에서 외부 도구 연동으로 가능성을 확장하세요.</p>
+<hr />
+<p><strong>참고 자료</strong>:</p>
+<ul>
+<li><a href="https://code.claude.com/docs/ko/cli-reference">Claude Code CLI 레퍼런스</a></li>
+<li><a href="https://github.com/Yeachan-Heo/oh-my-claudecode#execution-modes">oh-my-claudecode 실행 모드</a></li>
+</ul>
 
 
 
