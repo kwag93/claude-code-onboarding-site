@@ -1,6 +1,6 @@
 # 01. 빠른 시작 가이드
 
-Claude Code를 설치하고 최적의 환경을 구성하는 방법입니다.
+Claude Code 설치하고 환경 세팅하는 법이에요.
 
 ## 1단계: Claude Code 설치
 
@@ -32,7 +32,7 @@ https://code.claude.com/docs/en/overview
 
 ## 3단계: oh-my-claudecode 플러그인 설치 (강력 추천)
 
-[oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode)는 Claude Code를 **멀티 에이전트 오케스트레이션 플랫폼**으로 확장하는 플러그인입니다.
+[oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode)는 Claude Code에 **멀티 에이전트 기능**을 얹어주는 플러그인이에요.
 
 ### 왜 oh-my-claudecode인가?
 
@@ -56,7 +56,7 @@ https://code.claude.com/docs/en/overview
 
 ### deep-init 실행 (첫 사용 시 필수)
 
-프로젝트를 처음 시작할 때 `deep-init`을 실행하면 **계층적 코드베이스 문서화**가 생성됩니다.
+프로젝트를 처음 시작할 때 `deep-init`을 실행하면 **코드베이스 문서가 자동으로 만들어집니다.**
 
 ```
 /oh-my-claudecode:deep-init
@@ -64,9 +64,9 @@ https://code.claude.com/docs/en/overview
 
 이 명령은:
 
-- 프로젝트 구조를 체계적으로 인덱싱
-- AGENTS.md 파일 생성 (각 디렉토리별 컨텍스트)
-- 향후 검색/분석 작업의 기반 마련
+- 프로젝트 구조를 쭉 훑어서 인덱싱
+- AGENTS.md 파일 생성 (디렉토리별 컨텍스트)
+- 이후 검색이나 분석할 때 기반이 됨
 
 ---
 
@@ -155,7 +155,7 @@ FastAPI 0.115 버전의 변경사항 알려줘
 
 ## 다음 단계
 
-환경 설정이 완료되었다면 [02. AI 마인드셋](./02-ai-mindset.md)에서 AI를 효과적으로 활용하는 관점을 알아보세요.
+환경 설정이 끝났으면 [02. AI 마인드셋](./02-ai-mindset.md)에서 AI를 잘 쓰는 관점부터 잡아보세요.
 
 ---
 
