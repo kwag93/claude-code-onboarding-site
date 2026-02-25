@@ -4,33 +4,48 @@ Claude Code 설치하고 환경 세팅하는 법이에요.
 
 ## 1단계: Claude Code 설치
 
-### macOS / Linux
+### 권장: 공식 설치 스크립트 (자동 업데이트)
+
+**macOS, Linux, WSL:**
 
 ```bash
-npm install -g @anthropic-ai/claude-code
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-### Windows (WSL2)
-
-Claude Code는 네이티브 Windows를 지원하지 않습니다. **WSL2** 환경에서 실행해야 해요.
+**Windows PowerShell** (관리자 권한):
 
 ```powershell
-# 1. WSL2 설치 (관리자 권한 PowerShell)
-wsl --install
+irm https://claude.ai/install.ps1 | iex
 ```
 
-재부팅 후 Ubuntu 터미널을 열고:
+**Windows CMD** (관리자 권한):
+
+```cmd
+curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
+```
+
+> **Windows 필수**: [Git for Windows](https://git-scm.com/downloads/win) 설치 후 진행하세요.
+
+!!! tip
+    공식 설치 스크립트 쓰면 업데이트도 자동이에요.
+
+### 대안: 패키지 매니저
+
+**Homebrew (macOS):**
 
 ```bash
-# 2. Node.js 설치 (없는 경우)
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-# 3. Claude Code 설치
-npm install -g @anthropic-ai/claude-code
+brew install --cask claude-code
 ```
 
-> **Tip**: VS Code 사용자라면 Remote - WSL 확장을 설치하세요. WSL 안에서 바로 Claude Code를 실행할 수 있습니다.
+**WinGet (Windows):**
+
+```cmd
+winget install Anthropic.ClaudeCode
+```
+
+> **주의**: 패키지 매니저로 설치하면 수동 업데이트가 필요합니다.
+> - Homebrew: `brew upgrade claude-code`
+> - WinGet: `winget upgrade Anthropic.ClaudeCode`
 
 ### 설치 확인
 
@@ -38,10 +53,30 @@ npm install -g @anthropic-ai/claude-code
 claude --version
 ```
 
+---
+
+### 지원 환경
+
+- **VS Code** (권장) - 기본 IDE
+- **Desktop App** - 독립형 애플리케이션
+- **Web** - 브라우저에서 직접 사용
+- **JetBrains IDE** - IntelliJ, PyCharm 등
+- **Cursor, Windsurf** 등 다른 에디터도 지원
+
+### 계정 설정
+
+Claude Code를 사용하려면 다음 중 하나가 필요해요:
+
+- **Claude Pro/Max/Teams/Enterprise** - claude.com 계정
+- **Claude Console** - API 키 기반 (pay-as-you-go)
+- **Anthropic Bedrock** - AWS 환경
+- **Google Vertex AI** - Google Cloud 환경
+- **Third-party** - Foundry 등 다른 제공자
+
 ## 2단계: 공식 문서 참조
 
-> **Tip**: 공식 문서를 직접 읽을 필요는 없습니다.
-> Claude에게 "이 문서 읽고 요약해줘"라고 던지면 됩니다.
+> **Tip**: 직접 읽을 필요 없어요.
+> Claude한테 "이 문서 읽고 요약해줘" 던지면 됩니다.
 
 **공식 문서**: https://code.claude.com/docs/en/overview
 
@@ -78,7 +113,7 @@ https://code.claude.com/docs/en/overview
 
 ### deep-init 실행 (첫 사용 시 필수)
 
-프로젝트를 처음 시작할 때 `deep-init`을 실행하면 **코드베이스 문서가 자동으로 만들어집니다.**
+프로젝트 처음 시작할 때 실행하면 **코드베이스 문서를 자동으로 만들어줘요.**
 
 ```
 /oh-my-claudecode:deep-init
@@ -100,13 +135,13 @@ https://code.claude.com/docs/en/overview
 /oh-my-claudecode:mcp-setup
 ```
 
-이 명령으로 추천 MCP 서버들이 자동 구성됩니다.
+추천 MCP 서버들이 한 번에 세팅돼요.
 
 ### oh-my-claudecode를 사용하지 않는 경우
 
 **Context7은 필수로 설치하세요!**
 
-Context7은 라이브러리의 최신 문서를 실시간으로 가져오는 MCP 서버입니다.
+Context7은 라이브러리 최신 문서를 실시간으로 땡겨오는 MCP 서버예요.
 
 ```bash
 # ~/.claude.json에 추가
@@ -134,7 +169,7 @@ FastAPI 0.115 버전의 변경사항 알려줘
 
 ## 5단계: 프로젝트 설정 (CLAUDE.md)
 
-프로젝트 루트에 `CLAUDE.md` 파일을 생성하면 Claude가 컨텍스트를 더 잘 이해합니다.
+프로젝트 루트에 `CLAUDE.md`를 만들면 Claude가 프로젝트 맥락을 바로 파악해요.
 
 ```markdown
 # 프로젝트 컨텍스트

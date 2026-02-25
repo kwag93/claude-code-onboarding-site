@@ -4,6 +4,44 @@
 
 ---
 
+## v1.5.0 (2026-02-25)
+
+**공식 문서 기반 대규모 업데이트: Windows 설치 수정, 신규 문서 5개 추가, 확장 기능 체계 개편**
+
+### 설치 가이드 수정
+
+- [01. 빠른 시작](./01-quick-start.md): **Windows 네이티브 설치 지원 반영** (PowerShell, CMD, WinGet)
+  - 기존 WSL2 전용 안내를 네이티브 Windows 설치 메인으로 변경
+  - 공식 설치 스크립트(`curl`/`irm`) 기반으로 전면 재작성
+  - Homebrew, WinGet 패키지 매니저 옵션 추가
+  - VS Code, Desktop App, Web, JetBrains 등 다양한 환경 안내 추가
+
+### 새 문서 추가 (5개)
+
+- [20. 확장 기능 개요](./20-features-overview.md): CLAUDE.md, Skills, Subagents, Agent Teams, MCP, Hooks 기능 비교표, 비슷한 기능 비교 (Skill vs Subagent 등), 컨텍스트 비용 이해, 기능 조합 패턴
+- [21. 모범 사례](./21-best-practices.md): 컨텍스트 관리, 검증 방법 제공, 탐색→계획→코딩, 세션 관리, 자동화/확장, 흔한 실패 패턴 (공식 best-practices 기반)
+- [22. Remote Control](./22-remote-control.md): 로컬 세션을 모바일/브라우저에서 이어서 사용, Pro/Max 전용 (Team/Enterprise 불가), 연결/보안, 활용 시나리오
+- [23. Chrome 확장 프로그램](./23-chrome-extension.md): 브라우저 자동화, 라이브 디버깅, 양식 자동화, 데이터 추출, GIF 기록 등 예제 워크플로우
+- [24. GitLab CI/CD](./24-gitlab-cicd.md): CI/CD 파이프라인 통합, @claude 멘션, AWS Bedrock/Google Vertex AI 설정, 모범 사례
+
+### 네비게이션 재구성
+
+- **실무 가이드**: 모범 사례, 리모트 컨트롤, GitLab CI/CD 추가
+- **확장하기**: 확장 기능 개요를 섹션 첫 문서로 추가, Chrome 확장 프로그램 추가
+- 총 24개 문서 체계로 확장
+
+### 참조
+
+- [공식 Overview](https://code.claude.com/docs/en/overview)
+- [공식 Quickstart](https://code.claude.com/docs/en/quickstart)
+- [공식 Features Overview](https://code.claude.com/docs/en/features-overview)
+- [공식 Best Practices](https://code.claude.com/docs/en/best-practices)
+- [공식 Remote Control](https://code.claude.com/docs/ko/remote-control)
+- [공식 Chrome](https://code.claude.com/docs/ko/chrome)
+- [공식 GitLab CI/CD](https://code.claude.com/docs/ko/gitlab-ci-cd)
+
+---
+
 ## v1.4.0 (2026-02-25)
 
 **디자인 리뉴얼, 팀 세션/코워크 분리, Stitch MCP 추가, Windows 설치 가이드**를 진행했습니다.
