@@ -10,6 +10,28 @@ Claude Code 설치하고 환경 세팅하는 법이에요.
 npm install -g @anthropic-ai/claude-code
 ```
 
+### Windows (WSL2)
+
+Claude Code는 네이티브 Windows를 지원하지 않습니다. **WSL2** 환경에서 실행해야 해요.
+
+```powershell
+# 1. WSL2 설치 (관리자 권한 PowerShell)
+wsl --install
+```
+
+재부팅 후 Ubuntu 터미널을 열고:
+
+```bash
+# 2. Node.js 설치 (없는 경우)
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# 3. Claude Code 설치
+npm install -g @anthropic-ai/claude-code
+```
+
+> **Tip**: VS Code 사용자라면 Remote - WSL 확장을 설치하세요. WSL 안에서 바로 Claude Code를 실행할 수 있습니다.
+
 ### 설치 확인
 
 ```bash

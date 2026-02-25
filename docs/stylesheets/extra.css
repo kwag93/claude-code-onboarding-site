@@ -1,20 +1,50 @@
-/* 가독성 중심 타이포그래피 */
+/* ===================================================================
+   Claude Code 온보딩 가이드 - Custom Theme
+   Claude Code Docs 스타일 기반 (clean dark header + warm accent)
+   =================================================================== */
+
+/* --- Design Tokens --- */
 :root {
   --md-text-font: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
   --md-code-font: 'JetBrains Mono', 'D2Coding', 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  /* 보조 색상 */
+  --custom-border: rgba(0, 0, 0, 0.08);
+  --custom-surface: #f8f9fa;
+  --custom-surface-hover: #f1f3f5;
+  --custom-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --custom-shadow-md: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --custom-radius: 8px;
+  --custom-radius-lg: 12px;
 }
 
-/* 본문 크기/줄간격: 긴 문장도 읽기 쉬운 밀도로 조정 */
+/* Custom Primary Color - Clean dark header */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #1B1B1F;
+  --md-primary-fg-color--light: #2D2D33;
+  --md-primary-fg-color--dark: #111114;
+  --md-primary-bg-color: #FFFFFF;
+  --md-primary-bg-color--light: #FFFFFFB3;
+  --md-accent-fg-color: #D97706;
+  --md-accent-fg-color--transparent: #D9770610;
+}
+
+[data-md-color-scheme="slate"] {
+  --custom-border: rgba(255, 255, 255, 0.08);
+  --custom-surface: rgba(255, 255, 255, 0.04);
+  --custom-surface-hover: rgba(255, 255, 255, 0.07);
+  --custom-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --custom-shadow-md: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --md-accent-fg-color: #F59E0B;
+  --md-accent-fg-color--transparent: #F59E0B10;
+}
+
+/* --- Typography --- */
 .md-typeset {
-  font-size: clamp(0.98rem, 0.95rem + 0.18vw, 1.05rem);
-  line-height: 1.72;
-  letter-spacing: 0.01em;
-}
-
-/* 한 줄 길이 제한(Measure): 과도하게 긴 줄 방지 */
-.md-content__inner {
-  max-width: 72ch;
-  margin-inline: auto;
+  font-size: clamp(0.94rem, 0.92rem + 0.15vw, 1.01rem);
+  line-height: 1.75;
+  letter-spacing: -0.006em;
+  color: var(--md-default-fg-color);
 }
 
 .md-typeset p,
@@ -22,133 +52,436 @@
 .md-typeset td,
 .md-typeset th,
 .md-typeset blockquote {
-  line-height: 1.72;
+  line-height: 1.75;
 }
 
 .md-typeset p {
-  margin-block: 0 0.95em;
+  margin-block: 0 1em;
 }
 
 .md-typeset ul,
 .md-typeset ol {
-  margin-block: 0.6em 1em;
+  margin-block: 0.5em 1em;
 }
 
 .md-typeset li + li {
-  margin-top: 0.35em;
+  margin-top: 0.3em;
 }
 
-/* 제목 계층 대비 강화 */
+/* --- Headings --- */
 .md-typeset h1 {
-  font-size: clamp(1.9rem, 1.7rem + 0.9vw, 2.35rem);
-  line-height: 1.28;
-  margin-bottom: 0.7em;
+  font-size: clamp(1.75rem, 1.55rem + 0.85vw, 2.2rem);
+  line-height: 1.25;
+  margin-bottom: 0.5em;
   font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .md-typeset h2 {
-  font-size: clamp(1.42rem, 1.25rem + 0.45vw, 1.75rem);
-  line-height: 1.34;
-  margin-top: 1.5em;
-  margin-bottom: 0.55em;
+  font-size: clamp(1.35rem, 1.2rem + 0.4vw, 1.6rem);
+  line-height: 1.3;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--custom-border);
 }
 
 .md-typeset h3 {
-  font-size: clamp(1.18rem, 1.08rem + 0.32vw, 1.35rem);
-  line-height: 1.42;
-  margin-top: 1.3em;
-  margin-bottom: 0.45em;
+  font-size: clamp(1.1rem, 1.02rem + 0.25vw, 1.25rem);
+  line-height: 1.4;
+  margin-top: 1.6em;
+  margin-bottom: 0.4em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
-/* 코드/표는 본문 대비 지나치게 작지 않게 유지 */
+.md-typeset h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.4em;
+  margin-bottom: 0.3em;
+}
+
+/* --- Content Layout (넓은 컨텐츠 영역) --- */
+.md-grid {
+  max-width: 80rem;
+}
+
+.md-content__inner {
+  max-width: 65rem;
+  margin-inline: auto;
+  padding-top: 0.5rem;
+}
+
+/* --- Inline Code --- */
 .md-typeset code {
-  font-size: 0.92em;
+  font-size: 0.88em;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  background-color: var(--custom-surface);
+  border: 1px solid var(--custom-border);
+  font-weight: 400;
+}
+
+/* --- Code Blocks --- */
+.md-typeset pre {
+  border-radius: var(--custom-radius);
+  border: 1px solid var(--custom-border);
+  box-shadow: var(--custom-shadow-sm);
+  overflow: hidden;
 }
 
 .md-typeset pre > code {
-  font-size: 0.88em;
-  line-height: 1.6;
-}
-
-.md-typeset table:not([class]) {
-  font-size: 0.96em;
+  font-size: 0.85em;
   line-height: 1.65;
+  border: none;
+  background: none;
+  padding: 0;
 }
 
-.md-typeset table:not([class]) th,
-.md-typeset table:not([class]) td {
-  padding: 0.65em 0.8em;
+.highlight > pre > code,
+.highlighttable .highlight > pre > code {
+  background-color: transparent;
+}
+
+.md-clipboard {
+  border-radius: 6px;
+}
+
+/* --- Tables --- */
+.md-typeset table:not([class]) {
+  font-size: 0.92em;
+  line-height: 1.6;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--custom-border);
+  border-radius: var(--custom-radius);
+  overflow: hidden;
+  display: table;
+  width: 100%;
 }
 
 .md-typeset table:not([class]) th {
-  background-color: var(--md-default-fg-color--lightest);
+  background-color: var(--custom-surface);
   color: var(--md-default-fg-color);
+  font-weight: 600;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.75em 1em;
+  border-bottom: 1px solid var(--custom-border);
 }
 
-/* 인용구 강조는 유지하되 대비를 완화 */
+.md-typeset table:not([class]) td {
+  padding: 0.7em 1em;
+  border-bottom: 1px solid var(--custom-border);
+}
+
+.md-typeset table:not([class]) tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Blockquote (accent color 사용) --- */
 .md-typeset blockquote {
-  border-left: 4px solid var(--md-accent-fg-color);
-  background-color: var(--md-code-bg-color);
-  padding: 0.95em 1.1em;
-  margin: 1.1em 0;
+  border-left: 3px solid var(--md-accent-fg-color);
+  background-color: var(--custom-surface);
+  padding: 1em 1.25em;
+  margin: 1.25em 0;
+  border-radius: 0 var(--custom-radius) var(--custom-radius) 0;
+  font-style: normal;
 }
 
-/* 체크리스트 스타일 */
+.md-typeset blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Admonitions (Callout Boxes) --- */
+.md-typeset .admonition,
+.md-typeset details {
+  border: 1px solid var(--custom-border);
+  border-left: 3px solid;
+  border-radius: var(--custom-radius);
+  box-shadow: var(--custom-shadow-sm);
+  overflow: hidden;
+  margin: 1.25em 0;
+}
+
+.md-typeset .admonition > .admonition-title,
+.md-typeset details > summary {
+  font-weight: 600;
+  font-size: 0.9em;
+  padding: 0.6em 1em;
+  border-bottom: 1px solid var(--custom-border);
+}
+
+.md-typeset .admonition > .admonition-body,
+.md-typeset details > *:not(summary) {
+  font-size: 0.95em;
+}
+
+/* --- Tabs --- */
+.md-typeset .tabbed-set {
+  border: 1px solid var(--custom-border);
+  border-radius: var(--custom-radius);
+  overflow: hidden;
+  margin: 1.25em 0;
+}
+
+.md-typeset .tabbed-labels {
+  border-bottom: 1px solid var(--custom-border);
+}
+
+.md-typeset .tabbed-labels > label {
+  font-size: 0.88em;
+  font-weight: 500;
+  padding: 0.65em 1.2em;
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+}
+
+.md-typeset .tabbed-labels > label:hover {
+  opacity: 1;
+}
+
+.md-typeset .tabbed-labels > .tabbed-labels__active {
+  opacity: 1;
+}
+
+.md-typeset .tabbed-content {
+  padding: 0.5em 0;
+}
+
+/* --- Checklist --- */
+.md-typeset .task-list-item {
+  padding-left: 0.2em;
+}
+
 .md-typeset .task-list-item input[type='checkbox'] {
   margin-right: 0.5em;
+  accent-color: var(--md-accent-fg-color);
 }
 
-/* 버전 선택기 스타일 */
+/* --- Card Grid (Landing Page) --- */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  border: 1px solid var(--custom-border);
+  border-radius: var(--custom-radius-lg);
+  box-shadow: var(--custom-shadow-sm);
+  padding: 1.2em 1.4em;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ol > li:hover {
+  box-shadow: var(--custom-shadow-md);
+  transform: translateY(-2px);
+}
+
+.md-typeset .grid.cards > ul > li > hr,
+.md-typeset .grid.cards > ol > li > hr {
+  margin: 0.6em 0;
+  border-color: var(--custom-border);
+}
+
+/* --- Navigation --- */
+.md-tabs {
+  border-bottom: 1px solid var(--custom-border);
+}
+
+.md-tabs__link {
+  font-size: 0.82rem;
+  font-weight: 500;
+  opacity: 0.65;
+  transition: opacity 0.15s ease;
+}
+
+.md-tabs__link:hover {
+  opacity: 1;
+}
+
+.md-tabs__link--active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* 사이드바 */
+.md-nav__link {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+}
+
+.md-nav__item--active > .md-nav__link {
+  font-weight: 600;
+  color: var(--md-accent-fg-color);
+}
+
+.md-nav__item--nested > .md-nav__link {
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.55;
+}
+
+/* --- Header --- */
+.md-header {
+  box-shadow: var(--custom-shadow-sm);
+}
+
 .md-version {
   font-weight: 500;
+  font-size: 0.82rem;
 }
 
-/* 네비게이션 글자 크기 보강 */
-.md-nav__link {
-  font-size: 0.96rem;
-  line-height: 1.45;
+/* --- Footer --- */
+.md-footer {
+  border-top: 1px solid var(--custom-border);
 }
 
-/* 페이지 하단 이전/다음 네비게이션 */
 .md-footer__link {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
 .md-footer__title {
-  font-size: 0.82rem;
-  opacity: 0.7;
+  font-size: 0.78rem;
+  opacity: 0.6;
 }
 
 .md-footer__direction {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
 }
 
-/* 404 페이지 */
-.md-typeset h1:only-child {
-  text-align: center;
+/* --- HR Divider --- */
+.md-typeset hr {
+  border-color: var(--custom-border);
+  margin: 2em 0;
 }
 
-/* 로딩 프로그레스 바 색상 */
+/* --- Link styling (accent color 사용) --- */
+.md-typeset a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.md-typeset a:hover {
+  border-bottom-color: var(--md-accent-fg-color);
+}
+
+.md-nav a,
+.md-tabs a,
+.md-footer a,
+.md-header a,
+.md-typeset .grid.cards a,
+.md-typeset .admonition a,
+.md-typeset .headerlink {
+  border-bottom: none;
+}
+
+/* --- Progress Bar --- */
 .md-progress {
   background-color: var(--md-accent-fg-color);
 }
 
-/* 모바일에서 본문 축소 방지 */
+/* --- Search --- */
+.md-search__form {
+  border-radius: var(--custom-radius);
+}
+
+/* --- 404 Page --- */
+.md-typeset h1:only-child {
+  text-align: center;
+}
+
+/* --- Landing Page Hero --- */
+.hero-section {
+  text-align: center;
+  padding: 2.5em 1em 2em;
+  margin-bottom: 1em;
+}
+
+.hero-section h1 {
+  font-size: clamp(2rem, 1.8rem + 1.2vw, 2.8rem) !important;
+  margin-bottom: 0.3em !important;
+  border-bottom: none !important;
+}
+
+.hero-section .hero-subtitle {
+  font-size: 1.12rem;
+  opacity: 0.7;
+  margin-bottom: 1.5em;
+  font-weight: 400;
+}
+
+.hero-section .hero-quote {
+  display: inline-block;
+  background: var(--custom-surface);
+  border: 1px solid var(--custom-border);
+  border-radius: var(--custom-radius-lg);
+  padding: 0.8em 1.5em;
+  font-size: 1.05rem;
+  font-weight: 500;
+  max-width: 600px;
+  margin: 0 auto 1em;
+}
+
+.hero-section .hero-meta {
+  font-size: 0.85rem;
+  opacity: 0.5;
+  margin-top: 1em;
+}
+
+/* --- Section Title (Landing) --- */
+.section-title {
+  font-size: 0.78rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  opacity: 0.45;
+  margin-bottom: 1em !important;
+  margin-top: 2.5em !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+/* --- Responsive --- */
 @media screen and (max-width: 44.9375em) {
   .md-typeset {
-    font-size: 1rem;
-    line-height: 1.68;
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 
   .md-typeset h1 {
-    font-size: clamp(1.65rem, 1.45rem + 1.6vw, 2rem);
+    font-size: clamp(1.55rem, 1.35rem + 1.4vw, 1.9rem);
   }
 
   .md-typeset h2 {
-    font-size: clamp(1.28rem, 1.12rem + 1vw, 1.48rem);
+    font-size: clamp(1.2rem, 1.08rem + 0.8vw, 1.4rem);
   }
 
   .md-nav__link {
-    font-size: 0.98rem;
+    font-size: 0.92rem;
+  }
+
+  .hero-section {
+    padding: 1.5em 0.5em 1em;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* 태블릿 */
+@media screen and (min-width: 44.9375em) and (max-width: 76.25em) {
+  .md-content__inner {
+    max-width: 56rem;
   }
 }
