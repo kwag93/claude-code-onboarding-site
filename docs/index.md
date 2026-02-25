@@ -8,7 +8,7 @@
 **AI는 도구가 아니라, 넓은 지식을 가진 도서관 사서입니다.**
 </div>
 
-<p class="hero-meta">v1.4.0 · CLOBOT</p>
+<p class="hero-meta">v1.5.0 · CLOBOT</p>
 
 </div>
 
