@@ -18,6 +18,8 @@
 | [CLAUDE.md 활용법](https://claude.com/blog/using-claude-md-files) | CLAUDE.md 작성 가이드 | 영어 |
 | [MCP 연결 가이드](https://code.claude.com/docs/en/mcp) | MCP 서버 설정 | 영어 |
 | [Skills 가이드](https://code.claude.com/docs/en/skills) | 스킬 만들기 | 영어 |
+| [Status Line 커스터마이징](https://code.claude.com/docs/en/statusline) | 하단 대시보드 만들기 | 영어 |
+| [Keybindings 커스터마이징](https://code.claude.com/docs/en/keybindings) | 키보드 단축키 설정 | 영어 |
 | [Common Workflows](https://code.claude.com/docs/en/common-workflows) | 일반적인 워크플로우 | 영어 |
 
 !!! tip "영어 문서 읽는 쉬운 방법"
@@ -94,6 +96,18 @@
 - 음성 입력이 타이핑보다 빠르고 컨텍스트 전달이 풍부합니다
 - `/clear` + `/compact`로 컨텍스트를 깔끔하게 관리하세요
 - tmux로 자가 검증 사이클을 구성하면 검토 속도가 올라갑니다
+
+### jay_ai__ — Claude Code 19가지 입문~전문가 팁
+
+- **URL**: [threads.com/@jay_ai__](https://www.threads.com/@jay_ai__/post/DVIozZbD_nW)
+- **내용**: 모델 선택, 단축키, CLAUDE.md, Hooks, Status Line, 컨텍스트 관리까지 19개 팁을 입문자부터 전문가까지 단계별로 정리.
+- **추천 대상**: 한국어로 빠르게 전체 기능을 훑고 싶은 분
+
+### How Boris Uses Claude Code
+
+- **URL**: [howborisusesclaudecode.com](https://howborisusesclaudecode.com)
+- **내용**: Claude Code 창시자 Boris Cherny의 일상 사용법 40가지. 5개 Worktree 병렬, Plan-Review-Plan 패턴, CLAUDE.md 지속 갱신 습관 등.
+- **추천 대상**: 만든 사람이 어떻게 쓰는지 궁금한 분
 
 ### ClaudeLog
 
