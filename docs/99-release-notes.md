@@ -4,6 +4,39 @@
 
 ---
 
+## v1.6.0 (2026-03-02)
+
+**Status Line & 키보드 단축키 가이드 추가, 파워 유저 팁 대폭 보강**
+
+### 새 문서 추가 (2개)
+
+- [25. Status Line 커스터마이징](./25-statusline-guide.md): 하단 대시보드 만들기, /statusline 명령어, 수동 설정, Bash/Python 스크립트 6개 예제 (컨텍스트 바, Git 상태, 비용 추적, 멀티라인, 클릭 링크, 캐싱), 사용 가능한 JSON 필드, 트러블슈팅
+- [26. 키보드 단축키 커스터마이징](./26-keybindings-guide.md): /keybindings 설정, keybindings.json 구조, 18개 컨텍스트별 액션 목록, Chord 바인딩, Vim 모드 상호작용, 터미널 멀티플렉서 충돌 해결, 실전 레시피 4개
+
+### 기존 문서 보강
+
+- [13. 파워 유저 팁](./13-power-user-tips.md): **jay_ai__ 커뮤니티 팁 반영**
+  - 모델 선택 전략 추가 (Opus/Sonnet/Haiku/opusplan, effort level, /fast)
+  - 세션 이동 추가 (/teleport, /desktop, --from-pr)
+  - Notification hook 레시피 (macOS osascript)
+  - /sandbox 안전한 자율 모드
+  - Boris Cherny(창시자) 습관 5가지
+  - 치트시트 대폭 확장 (명령어 20개, 단축키 15개, CLI 플래그 9개)
+
+### 네비게이션 개선
+
+- **확장하기** 섹션에 Status Line, 키보드 단축키 문서 추가
+- 총 26개 문서 체계로 확장
+
+### 참조
+
+- [공식 Status Line](https://code.claude.com/docs/en/statusline)
+- [공식 Keybindings](https://code.claude.com/docs/en/keybindings)
+- [jay_ai__ 스레드](https://www.threads.com/@jay_ai__/post/DVIozZbD_nW)
+- [Boris Cherny 팁](https://howborisusesclaudecode.com)
+
+---
+
 ## v1.5.0 (2026-02-25)
 
 **공식 문서 기반 대규모 업데이트: Windows 설치 수정, 신규 문서 5개 추가, 확장 기능 체계 개편**

@@ -106,6 +106,25 @@ alias cr='claude --resume'      # 대화 목록에서 선택
 
 하루에 수십 번 실행하는 명령어라면 별칭을 만드세요. 타이핑 시간이 쌓이면 꽤 큰 차이거든요.
 
+### 4-1. 모델 선택 전략
+
+`/model`로 상황에 맞는 모델을 고르세요.
+
+| 모델 | 용도 | 특징 |
+|------|------|------|
+| **Opus** | 설계, 디버깅, 리팩토링 | 가장 강력 |
+| **Opus [1m]** | 수백 파일 프로젝트 분석 | 100만 토큰 컨텍스트 |
+| **Sonnet** | 일상 코딩, 기능 추가 | 균형 잡힌 성능 |
+| **Haiku** | 간단한 질문, 빠른 수정 | 가장 빠름 |
+| **opusplan** | Plan은 Opus, 실행은 Sonnet | **추천**: 자동 분배 |
+
+**Effort Level 조절**: 모델 선택기에서 `←` `→` 화살표로 조절해요.
+
+- **low**: 빠르고 저렴. 단순 작업에.
+- **high**: 깊은 추론. 복잡한 문제에.
+
+`/fast`를 켜면 출력 속도가 **2.5배** 빨라져요. 단, 비용이 6배 증가하니 급할 때만 쓰세요.
+
 ### 5. 키보드 단축키 4개
 
 마우스 없이 작업하는 게 목표예요.
@@ -282,6 +301,25 @@ $ grep -r "Stripe" ~/.claude/conversations/
 
 "그때 Stripe 연동 어떻게 했더라?" 싶을 때, 과거 대화를 grep으로 바로 찾을 수 있어요.
 
+**PR에서 세션 재개:**
+
+```bash
+# PR을 만들면 세션이 자동 연결됨
+gh pr create
+
+# 나중에 그 PR 컨텍스트로 바로 재개
+claude --from-pr 123
+```
+
+**세션 이동 (인터페이스 간):**
+
+| 명령어 | 방향 | 설명 |
+|--------|------|------|
+| `/teleport` | 터미널 → 웹 | 웹 브라우저에서 이어서 |
+| `/desktop` | CLI → 데스크톱 앱 | 데스크톱 앱에서 이어서 |
+
+모바일에서 코드 리뷰를 보거나, 이동 중에 작업을 확인할 때 유용해요.
+
 **내보내기:**
 
 ```
@@ -438,6 +476,18 @@ Hooks는 특정 이벤트 시 자동 실행되는 셸 명령어예요. AI의 확
 }
 ```
 
+**가장 유용한 Hook: macOS 데스크톱 알림**
+
+Claude가 작업을 끝내거나 승인이 필요할 때 맥 알림을 받을 수 있어요. 긴 작업을 시키고 다른 일 하세요.
+
+```text
+/hooks → Notification → 명령어 입력:
+```
+
+```bash
+osascript -e 'display notification "$CLAUDE_NOTIFICATION_MESSAGE" with title "Claude Code"'
+```
+
 ### 18. Skills와 Agents 활용
 
 **Skills**: Claude가 필요할 때 자동으로 호출하는 재사용 가능한 지식 조각
@@ -574,6 +624,52 @@ Level 6: Hooks (규칙 강제 자동화)
 
 > "같은 작업을 3번 이상 반복한다면, 자동화할 방법을 찾으세요. 그리고 그 자동화 과정 자체도 자동화하세요." — ykdojo
 
+### 24-1. /sandbox — 안전한 자율 모드
+
+`--dangerously-skip-permissions`가 불안하다면, `/sandbox`가 대안이에요.
+
+```text
+/sandbox
+```
+
+승인 없이 실행하되, **파일과 네트워크를 격리**해요. 컨테이너 설정 없이 간편하게 안전한 자율 모드를 쓸 수 있어요.
+
+| 방식 | 안전성 | 편의성 | 용도 |
+|------|--------|--------|------|
+| `/permissions` | 세밀한 제어 | 초기 설정 필요 | 일상 작업 |
+| `/sandbox` | 격리된 환경 | 즉시 사용 | 실험, 프로토타입 |
+| `--dangerously-skip-permissions` | 없음 | 최고 | 컨테이너 안에서만 |
+
+### 24-2. Boris Cherny(Claude Code 창시자)의 습관
+
+[howborisusesclaudecode.com](https://howborisusesclaudecode.com)에서 선별한 핵심 5가지:
+
+**1. 검증이 핵심**
+
+Claude에게 테스트를 돌릴 수 있게 하세요. 품질이 2~3배 올라갑니다.
+
+**2. 5개 Worktree 병렬**
+
+기능 A + 버그 B + 리팩토링 C를 동시에 진행해요.
+
+```bash
+claude -w feature-auth     # worktree 1
+claude -w fix-payment      # worktree 2
+claude -w refactor-api     # worktree 3
+```
+
+**3. CLAUDE.md 계속 갱신**
+
+실수할 때마다 CLAUDE.md에 적으세요. 같은 실수를 두 번 안 합니다.
+
+**4. Plan을 Plan으로 리뷰**
+
+한 Claude가 계획하고, 다른 Claude가 그 계획을 리뷰해요.
+
+**5. 다시 시키세요**
+
+"더 우아하게 구현해" 한 마디면 됩니다. Claude는 같은 걸 더 잘 만들 수 있어요.
+
 ### 25. 출력 검증 습관
 
 AI가 생성한 코드를 맹목적으로 신뢰하지 마세요.
@@ -693,26 +789,44 @@ ykdojo는 팁을 공유하면서 `--system-prompt` 플래그의 존재를 알게
 | 명령어 | 설명 |
 |--------|------|
 | `/init` | CLAUDE.md 자동 생성 |
+| `/model` | 모델 선택 (← → 로 effort 조절) |
+| `/fast` | 2.5배 빠른 출력 (비용 6배) |
 | `/usage` | 토큰 사용량 확인 |
 | `/context` | 컨텍스트 X-Ray |
 | `/clear` | 대화 초기화 |
-| `/stats` | 사용 통계 |
+| `/compact` | 컨텍스트 압축 (지시 포함 가능) |
+| `/stats` | 사용 통계, 스트릭, 모델별 현황 |
 | `/export` | 대화 마크다운 내보내기 |
 | `/mcp` | MCP 서버 관리 |
 | `/permissions` | 승인 명령어 관리 |
 | `/rename` | 세션 이름 지정 |
+| `/teleport` | 터미널 → 웹 세션 이동 |
+| `/desktop` | CLI → 데스크톱 앱 이동 |
+| `/statusline` | 하단 상태 바 설정 |
+| `/keybindings` | 키보드 단축키 커스터마이징 |
+| `/vim` | Vim 키바인딩 활성화 |
+| `/doctor` | 설치 상태 건강 검진 |
+| `/sandbox` | 격리된 자율 모드 |
+| `/hooks` | Hook 관리 |
 
 ### 키보드 단축키
 
 | 단축키 | 기능 |
 |--------|------|
 | `!command` | 셸 명령 즉시 실행 |
+| `Esc` | 생성 중지 |
 | `Esc Esc` | 되감기 (Undo) |
 | `Ctrl+R` | 역방향 검색 |
 | `Ctrl+S` | 프롬프트 임시 저장 |
-| `Shift+Tab` ×2 | Plan 모드 토글 |
-| `Ctrl+B` | 백그라운드로 보내기 |
+| `Ctrl+V` | 이미지 붙여넣기 |
 | `Ctrl+G` | 외부 에디터로 편집 |
+| `Ctrl+O` | thinking 과정 실시간 표시 |
+| `Ctrl+B` | 백그라운드로 보내기 |
+| `Ctrl+T` | 할 일 목록 토글 |
+| `Shift+Tab` | 모드 전환 (Normal/Plan/Auto) |
+| `Cmd+P` | 모델 선택기 |
+| `Cmd+T` | Extended Thinking 토글 |
+| `Tab` | 자동완성 제안 수락 |
 | `\` + Enter | 여러 줄 입력 |
 
 ### CLI 플래그
@@ -723,7 +837,11 @@ ykdojo는 팁을 공유하면서 `--system-prompt` 플래그의 존재를 알게
 | `--continue` | 마지막 세션 이어가기 |
 | `--resume` | 세션 목록에서 선택 |
 | `--resume name` | 이름으로 세션 재개 |
+| `--from-pr 123` | PR 컨텍스트로 재개 |
 | `--chrome` | Chrome 통합 |
+| `-w feature` | 독립 Worktree에서 작업 |
+| `--max-budget-usd 5` | 비용 제한 |
+| `--max-turns 3` | 턴 수 제한 |
 
 ---
 

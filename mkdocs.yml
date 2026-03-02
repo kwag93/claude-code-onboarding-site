@@ -74,6 +74,8 @@ nav:
       - MCP 생태계: 10-mcp-ecosystem.md
       - 스킬과 플러그인: 11-skills-plugins.md
       - Chrome 확장 프로그램: 23-chrome-extension.md
+      - Status Line 커스터마이징: 25-statusline-guide.md
+      - 키보드 단축키 커스터마이징: 26-keybindings-guide.md
       - 추천 리소스: 18-resources.md
   - 철학:
       - AI와 함께 일하는 방법: 12-ai-work-philosophy.md

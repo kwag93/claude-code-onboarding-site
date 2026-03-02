@@ -8,7 +8,7 @@
 **AI는 도구가 아니라, 넓은 지식을 가진 도서관 사서입니다.**
 </div>
 
-<p class="hero-meta">v1.5.0 · CLOBOT</p>
+<p class="hero-meta">v1.6.0 · CLOBOT</p>
 
 </div>
 
@@ -83,6 +83,8 @@
 |------|------|----------|
 | [10. MCP 생태계](./10-mcp-ecosystem.md) | Context7, Figma MCP, Stitch MCP, Jira MCP | 15분 |
 | [11. 스킬과 플러그인](./11-skills-plugins.md) | humanizer, 직접 만들기, 서브에이전트 | 15분 |
+| [25. Status Line](./25-statusline-guide.md) | 하단 대시보드 커스터마이징, 셸 스크립트 예제 | 15분 |
+| [26. 키보드 단축키](./26-keybindings-guide.md) | 커스텀 키바인딩, Vim 모드, Chords | 10분 |
 | [18. 추천 리소스](./18-resources.md) | 공식 문서, 한국어 가이드, 커뮤니티 허브 | 10분 |
 
 ### 철학
