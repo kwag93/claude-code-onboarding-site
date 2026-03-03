@@ -100,8 +100,8 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:zensical.extensions.emoji.twemoji
+      emoji_generator: !!python/name:zensical.extensions.emoji.to_svg
   - admonition
   - pymdownx.details
   - attr_list
@@ -117,11 +117,6 @@ plugins:
       lang:
         - ko
         - en
-  - mike:
-      version_selector: true
-      css_dir: css
-      javascript_dir: js
-      canonical_version: null
 
 # 추가 CSS
 extra_css:
@@ -143,9 +138,6 @@ extra:
           name: 개선이 필요해요
           data: 0
           note: 피드백 감사합니다. 어떤 부분이 부족했는지 GitHub Issue로 알려주세요.
-  version:
-    provider: mike
-    default: latest
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/kwag93/claude-code-onboarding-site

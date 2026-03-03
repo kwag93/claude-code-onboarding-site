@@ -1,95 +1,37 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
-  # main 브랜치에 push될 때 자동 배포
   push:
-    branches:
-      - main
-  # 수동 실행 가능 (버전 입력 받음)
+    branches: [main]
   workflow_dispatch:
-    inputs:
-      version:
-        description: '배포할 버전 (예: v1.0, v1.1)'
-        required: true
-        default: 'latest'
 
-# GitHub Pages에 배포하기 위한 권한
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # mike가 git 히스토리를 사용하므로 전체 히스토리 필요
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-
-      - name: Cache dependencies
-        uses: actions/cache@v3
+      - uses: actions/cache@v3
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Extract version from release notes
-        id: version
-        run: |
-          # release-notes.md에서 최신 버전 번호 추출 (예: v1.2.0)
-          VERSION=$(grep -oP '## v\K[0-9]+\.[0-9]+\.[0-9]+' docs/99-release-notes.md | head -1)
-          if [ -z "$VERSION" ]; then
-            VERSION="0.0.0"
-          fi
-          # mike용 단축 버전 (v1.2)
-          SHORT_VERSION="v$(echo $VERSION | cut -d. -f1,2)"
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "short_version=$SHORT_VERSION" >> $GITHUB_OUTPUT
-          echo "📋 추출된 버전: v$VERSION (별칭: $SHORT_VERSION)"
-
-      - name: Clean stale latest version
-        run: |
-          # 기존에 'latest'가 버전 이름으로 존재하면 삭제 (alias 충돌 방지)
-          if mike list | grep -q "^latest"; then
-            echo "🧹 기존 latest 버전 삭제"
-            mike delete --push latest || true
-          fi
-
-      - name: Deploy with mike
-        env:
-          INPUT_VERSION: ${{ github.event.inputs.version }}
-          EVENT_NAME: ${{ github.event_name }}
-        run: |
-          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
-            echo "📦 수동 배포: 버전 $INPUT_VERSION"
-            mike deploy --push --update-aliases "$INPUT_VERSION" latest
-            mike set-default --push latest
-          else
-            SHORT_VERSION="${{ steps.version.outputs.short_version }}"
-            FULL_VERSION="v${{ steps.version.outputs.version }}"
-            echo "📦 자동 배포: $SHORT_VERSION ($FULL_VERSION) + latest"
-            mike deploy --push --update-aliases "$SHORT_VERSION" latest --title "$SHORT_VERSION ($FULL_VERSION)"
-            mike set-default --push latest
-          fi
-
-      - name: Deploy result
-        run: |
-          echo "✅ 배포 완료!"
-          echo "🌐 사이트 URL: https://kwag93.github.io/claude-code-onboarding-site/"
+      - run: pip install -r requirements.txt
+      - run: zensical build --clean
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - uses: actions/deploy-pages@v4
+        id: deployment
