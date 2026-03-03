@@ -193,6 +193,9 @@ for file in src/**/*.ts; do
 done
 ```
 
+!!! warning "CI/CD에서 사용 시 주의"
+    비대화형 모드로 CI에 붙일 때는 **API 키 관리**에 주의하세요. 환경변수로 주입하되, 로그에 노출되지 않게 `--output-format json`의 결과만 저장하세요. 토큰 사용량 제한(`--max-tokens`)도 설정해두는 게 안전합니다.
+
 ### OMC의 ultrawork 모드
 
 CLI를 직접 여러 개 열 필요 없이, OMC가 알아서 병렬로 돌려줍니다.

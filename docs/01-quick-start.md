@@ -2,6 +2,8 @@
 
 Claude Code 설치하고 환경 세팅하는 법이에요.
 
+> Claude Code는 터미널에서 돌아가는 AI 에이전트예요. IDE 플러그인과 달리 파일 시스템, git, 셸 전체에 접근할 수 있어서 "대화"가 아니라 "작업"을 시킬 수 있습니다. 설치 5분이면 바로 체험할 수 있어요.
+
 ## 1단계: Claude Code 설치
 
 ### 권장: 공식 설치 스크립트 (자동 업데이트)
@@ -72,6 +74,9 @@ Claude Code를 사용하려면 다음 중 하나가 필요해요:
 - **Anthropic Bedrock** - AWS 환경
 - **Google Vertex AI** - Google Cloud 환경
 - **Third-party** - Foundry 등 다른 제공자
+
+!!! note "어떤 플랜이 맞을까?"
+    개인 사용이라면 **Claude Pro** ($20/월)로 시작하세요. 헤비 유저라면 **Max** ($100/월 또는 $200/월)가 5배~20배 더 넉넉합니다. API 키 방식(Console)은 사용한 만큼만 결제돼요.
 
 ## 2단계: 공식 문서 참조
 
