@@ -130,7 +130,8 @@
   border-radius: var(--custom-radius);
   border: 1px solid var(--custom-border);
   box-shadow: var(--custom-shadow-sm);
-  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .md-typeset pre > code {
@@ -150,6 +151,12 @@
 }
 
 /* --- Tables --- */
+.md-typeset__scrollwrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1em 0;
+}
+
 .md-typeset table:not([class]) {
   font-size: 0.92em;
   line-height: 1.6;
@@ -159,7 +166,8 @@
   border-radius: var(--custom-radius);
   overflow: hidden;
   display: table;
-  width: 100%;
+  width: max-content;
+  min-width: 100%;
 }
 
 .md-typeset table:not([class]) th {
@@ -429,7 +437,7 @@
   padding: 0.8em 1.5em;
   font-size: 1.05rem;
   font-weight: 500;
-  max-width: 600px;
+  max-width: min(600px, 90vw);
   margin: 0 auto 1em;
 }
 
@@ -453,7 +461,15 @@
 }
 
 /* --- Responsive --- */
+
+/* 모바일 (≤ 719px) */
 @media screen and (max-width: 44.9375em) {
+  .md-content__inner {
+    max-width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .md-typeset {
     font-size: 0.95rem;
     line-height: 1.7;
@@ -465,24 +481,180 @@
 
   .md-typeset h2 {
     font-size: clamp(1.2rem, 1.08rem + 0.8vw, 1.4rem);
+    margin-top: 1.4em;
+  }
+
+  .md-typeset h3 {
+    margin-top: 1.2em;
+  }
+
+  .md-typeset hr {
+    margin: 1.25em 0;
   }
 
   .md-nav__link {
     font-size: 0.92rem;
   }
 
+  /* 히어로 섹션 */
   .hero-section {
-    padding: 1.5em 0.5em 1em;
+    padding: 1.5em 0.75em 1em;
   }
 
   .hero-section h1 {
     font-size: 1.8rem !important;
   }
+
+  .hero-section .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-section .hero-quote {
+    font-size: 0.95rem;
+    padding: 0.7em 1em;
+  }
+
+  /* 카드 그리드 */
+  .md-typeset .grid.cards > ul > li,
+  .md-typeset .grid.cards > ol > li {
+    padding: 1em 1em;
+  }
+
+  /* 테이블 모바일 최적화 */
+  .md-typeset table:not([class]) {
+    font-size: 0.82em;
+  }
+
+  .md-typeset table:not([class]) th {
+    padding: 0.6em 0.7em;
+    font-size: 0.8em;
+  }
+
+  .md-typeset table:not([class]) td {
+    padding: 0.55em 0.7em;
+  }
+
+  /* 코드 블록 */
+  .md-typeset pre > code {
+    font-size: 0.8em;
+  }
+
+  /* Admonition */
+  .md-typeset .admonition,
+  .md-typeset details {
+    margin: 1em 0;
+  }
+
+  /* 블록쿼트 */
+  .md-typeset blockquote {
+    padding: 0.75em 1em;
+    margin: 1em 0;
+  }
+
+  /* 섹션 타이틀 */
+  .section-title {
+    margin-top: 1.8em !important;
+  }
+
+  /* 탭 */
+  .md-typeset .tabbed-labels > label {
+    font-size: 0.82em;
+    padding: 0.55em 0.8em;
+  }
 }
 
-/* 태블릿 */
+/* 소형 모바일 (≤ 380px) */
+@media screen and (max-width: 23.75em) {
+  .md-content__inner {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .md-typeset {
+    font-size: 0.9rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-section .hero-quote {
+    font-size: 0.88rem;
+    padding: 0.6em 0.8em;
+  }
+
+  .md-typeset .grid.cards > ul > li,
+  .md-typeset .grid.cards > ol > li {
+    padding: 0.8em 0.8em;
+  }
+
+  .md-typeset table:not([class]) {
+    font-size: 0.78em;
+  }
+}
+
+/* 태블릿 (720px ~ 1219px) */
 @media screen and (min-width: 44.9375em) and (max-width: 76.25em) {
   .md-content__inner {
     max-width: 56rem;
   }
+}
+
+/* --- 동적 뷰포트 & Safe Area 지원 --- */
+
+/* safe-area-inset: 노치폰(iPhone X+) 및 홈 인디케이터 대응 */
+@supports (padding: env(safe-area-inset-top)) {
+  .md-header {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .md-footer {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* "맨위로" 버튼: 하단 safe area 확보 */
+  [data-md-component="top"] {
+    bottom: calc(0.5rem + env(safe-area-inset-bottom));
+  }
+
+  /* 모바일 사이드바/네비게이션 하단 여백 */
+  @media screen and (max-width: 76.25em) {
+    .md-sidebar {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .md-content__inner {
+      padding-left: max(0.75rem, env(safe-area-inset-left));
+      padding-right: max(0.75rem, env(safe-area-inset-right));
+    }
+  }
+}
+
+/* dvh: 모바일 브라우저 주소창/툴바 변동 대응 (svh 폴백 포함) */
+@supports (height: 100dvh) {
+  @media screen and (max-width: 76.25em) {
+    .md-sidebar {
+      height: 100dvh;
+    }
+
+    .md-sidebar .md-sidebar__scrollwrap {
+      height: calc(100dvh - 3rem);
+    }
+
+    .md-nav--primary {
+      height: 100dvh;
+    }
+  }
+
+  .md-search__overlay {
+    height: 100dvh;
+  }
+}
+
+/* touch 스크롤 최적화 */
+.md-sidebar__scrollwrap,
+.md-nav--primary,
+.md-search__scrollwrap {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
