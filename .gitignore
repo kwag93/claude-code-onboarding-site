@@ -1,8 +1,14 @@
-# VS Code 히스토리
+# IDE/에디터 설정
 .history/
+.cursor/
+.windsurf/
 
-# OMC (oh-my-claudecode) 관련
+# AI 도구 로컬 설정
+.agent/
+.agents/
+.claude/
 .omc/
+.playwright-mcp/
 
 # Python 관련
 __pycache__/
@@ -18,3 +24,6 @@ site/
 # OS 관련
 .DS_Store
 Thumbs.db
+
+# 임시 스크린샷/이미지
+*.png
