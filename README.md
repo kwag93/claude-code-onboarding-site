@@ -3,7 +3,7 @@
 > AI 페어 프로그래밍으로 개발 생산성을 높이기 위한 팀 온보딩 문서
 
 [![Deploy](https://github.com/kwag93/claude-code-onboarding-site/actions/workflows/deploy.yml/badge.svg)](https://github.com/kwag93/claude-code-onboarding-site/actions/workflows/deploy.yml)
-[![Zensical](https://img.shields.io/badge/Zensical-blue?logo=materialformkdocs)](https://github.com/squidfunk/zensical)
+[![Zensical](https://img.shields.io/badge/Zensical-blue?logo=materialformkdocs)](https://github.com/zensical/zensical)
 [![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub_Pages-222?logo=githubpages)](https://kwag93.github.io/claude-code-onboarding-site/)
 
 **[사이트 바로가기 →](https://kwag93.github.io/claude-code-onboarding-site/)**
@@ -93,7 +93,7 @@ zensical build --clean
 
 ## 기술 스택
 
-- [Zensical](https://github.com/squidfunk/zensical) - 문서 프레임워크 (Material for MkDocs 후속)
+- [Zensical](https://github.com/zensical/zensical) - 문서 프레임워크 (Material for MkDocs 후속)
 - [GitHub Pages](https://pages.github.com/) - 호스팅
 - [GitHub Actions](https://github.com/features/actions) - CI/CD
 
