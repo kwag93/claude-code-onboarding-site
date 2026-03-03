@@ -4,6 +4,28 @@
 
 ---
 
+## v1.7.0 (2026-03-03)
+
+**빌드 시스템 마이그레이션: MkDocs Material → Zensical**
+
+### 빌드 시스템 변경
+
+- **MkDocs Material → Zensical 마이그레이션**: MkDocs 2.0의 Material 호환 불가 이슈에 대응하여, Material for MkDocs 팀이 만든 후속 SSG인 Zensical로 전환
+- **mike 버전 관리 제거**: 온보딩 가이드 특성상 다중 버전이 불필요하여 배포 파이프라인 단순화
+- **GitHub Pages 배포 방식 변경**: gh-pages 브랜치 → GitHub Actions artifact 배포로 전환
+
+### 변경 내역
+
+- `requirements.txt`: `mkdocs-material`, `mike` 제거 → `zensical` 추가
+- `mkdocs.yml`: emoji namespace를 `zensical.extensions.emoji`로 변경, mike 플러그인 및 버전 설정 제거
+- `.github/workflows/deploy.yml`: `zensical build --clean` + Pages artifact 배포로 전면 교체
+
+### 참조
+
+- [Zensical](https://github.com/squidfunk/zensical)
+
+---
+
 ## v1.6.0 (2026-03-02)
 
 **Status Line & 키보드 단축키 가이드 추가, 파워 유저 팁 대폭 보강**
