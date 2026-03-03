@@ -12,6 +12,7 @@ edit_uri: edit/main/docs/
 # 테마 설정
 theme:
   name: material
+  custom_dir: overrides
   language: ko
   palette:
     # 라이트 모드
