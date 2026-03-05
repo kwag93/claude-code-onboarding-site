@@ -1,0 +1,42 @@
+{% extends "main.html" %}
+
+{% block content %}
+<style>
+  .md-content .redirect-notice {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .md-content .redirect-notice h1 {
+    margin-bottom: 1rem;
+  }
+  .md-content .redirect-notice p {
+    color: var(--md-default-fg-color--light);
+  }
+  .md-content .redirect-notice a {
+    color: var(--md-accent-fg-color);
+    font-weight: 700;
+  }
+</style>
+
+<div class="redirect-notice">
+  <h1>페이지가 이동되었습니다</h1>
+  <p>문서가 재구성되어 요청하신 페이지가 존재하지 않습니다.</p>
+  <p><span id="countdown">3</span>초 후 홈으로 이동합니다... <a href="{{ config.site_url }}">바로 이동</a></p>
+</div>
+
+<script>
+  (function() {
+    var seconds = 3;
+    var el = document.getElementById("countdown");
+    var home = "{{ config.site_url }}";
+    var timer = setInterval(function() {
+      seconds--;
+      if (el) el.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.replace(home);
+      }
+    }, 1000);
+  })();
+</script>
+{% endblock %}
