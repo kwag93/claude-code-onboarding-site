@@ -155,14 +155,14 @@ Claude Code에서 에이전트 팀 사용하는 방법. use context7
 
 ### 컨텍스트 전달 방식
 
-**선택 기반** (데스크톱 전용):
+**선택 기반** (데스크톱 전용)
 
 ```
 # Figma에서 프레임 선택 후
 이 디자인대로 React 컴포넌트 만들어줘
 ```
 
-**링크 기반** (양쪽 모두):
+**링크 기반** (양쪽 모두)
 
 ```
 # node-id 포함된 URL을 전달
@@ -247,13 +247,13 @@ Stitch MCP는 Google Cloud 기반으로 동작합니다.
 
 | 도구 | 설명 |
 | --- | --- |
-| `build_site` | 프로젝트의 화면들을 라우트로 매핑해 사이트 코드 생성 |
+| `build_site` | 프로젝트의 화면을 라우트로 매핑해 사이트 코드 생성 |
 | `get_screen_code` | 특정 화면의 HTML 코드 추출 |
 | `get_screen_image` | 화면 스크린샷을 base64 이미지로 추출 |
 
 ### Agent Skills (확장 기능)
 
-Stitch는 모듈식 Agent Skills도 지원합니다:
+Stitch는 모듈식 Agent Skills도 지원합니다.
 
 - **Design MD**: 마크다운 형식의 디자인 문서 자동 생성
 - **React Components**: Stitch 디자인을 프로덕션 React 코드로 변환 (디자인 토큰 유지)

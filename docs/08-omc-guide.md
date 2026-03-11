@@ -73,7 +73,7 @@ autopilot REST API로 도서 관리 시스템 만들어줘.
 ### 동작 중 상태 확인
 
 autopilot이 실행되면 각 Phase의 진행 상황이 표시됩니다.
-중간에 멈추고 싶으면:
+중간에 멈추고 싶으면
 
 ```
 /oh-my-claudecode:cancel

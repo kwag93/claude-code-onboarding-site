@@ -362,7 +362,7 @@ claude:
 Error: ANTHROPIC_API_KEY not found
 ```
 
-**해결:**
+**해결**
 1. 변수가 **마스킹** 되어 있는지 확인
 2. 프로젝트 설정에서 CI/CD 변수 재확인
 3. Runner가 해당 변수를 볼 수 있는지 확인 (Protected branch 범위 주의)

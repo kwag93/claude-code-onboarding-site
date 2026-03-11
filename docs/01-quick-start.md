@@ -124,7 +124,7 @@ https://code.claude.com/docs/en/overview
 /oh-my-claudecode:deep-init
 ```
 
-이 명령은:
+이 명령을 실행하면
 
 - 프로젝트 구조를 쭉 훑어서 인덱싱
 - AGENTS.md 파일 생성 (디렉토리별 컨텍스트)
@@ -140,7 +140,7 @@ https://code.claude.com/docs/en/overview
 /oh-my-claudecode:mcp-setup
 ```
 
-추천 MCP 서버들이 한 번에 세팅돼요.
+추천 MCP 서버가 한 번에 세팅돼요.
 
 ### oh-my-claudecode를 사용하지 않는 경우
 

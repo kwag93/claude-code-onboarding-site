@@ -23,7 +23,7 @@ Claude Code에서 에이전트 여럿을 팀으로 묶어 병렬로 돌리는 �
 
 ### 활성화 방법
 
-`~/.claude/settings.json` 또는 프로젝트별 `.claude/settings.json`에 추가:
+`~/.claude/settings.json` 또는 프로젝트별 `.claude/settings.json`에 추가합니다.
 
 ```json
 {
