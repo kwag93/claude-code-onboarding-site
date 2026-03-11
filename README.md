@@ -30,13 +30,13 @@ Claude Code를 처음 접하는 팀원이 실무에 적용할 수 있도록 만�
 | **실무 가이드** | [03. 워크플로우](https://kwag93.github.io/claude-code-onboarding-site/03-workflows/) | 에이전트, 스킬, 훅 실무 예제 |
 | | [21. 모범 사례](https://kwag93.github.io/claude-code-onboarding-site/21-best-practices/) | 컨텍스트 관리, 검증, 탐색→계획→코딩 |
 | | [15. CLAUDE.md 마스터하기](https://kwag93.github.io/claude-code-onboarding-site/15-claude-md-mastery/) | 60줄 원칙, 3가지 계층, @import |
-| | [16. Hooks 실전 가이드](https://kwag93.github.io/claude-code-onboarding-site/16-hooks-practical/) | 4가지 이벤트, 실전 레시피 5개 |
+| | [16. Hooks 실전 가이드](https://kwag93.github.io/claude-code-onboarding-site/16-hooks-practical/) | 17가지 이벤트, 4가지 훅 타입, 실전 레시피 9개 |
 | | [06. 팀 세션 가이드](https://kwag93.github.io/claude-code-onboarding-site/06-agent-teams-cowork/) | 팀 세션 구성, 서브에이전트 비교, 토큰 비용 |
 | | [19. 코워크 가이드](https://kwag93.github.io/claude-code-onboarding-site/19-cowork-guide/) | 코워크 시작법, 엑셀/파워포인트 활용 |
 | | [22. 리모트 컨트롤](https://kwag93.github.io/claude-code-onboarding-site/22-remote-control/) | 모바일/브라우저에서 세션 이어서 사용 |
 | | [07. 왜 CLI인가](https://kwag93.github.io/claude-code-onboarding-site/07-why-cli/) | CLI 장점, 이미지 활용, 멀티 인스턴스 |
 | | [08. OMC 활용 가이드](https://kwag93.github.io/claude-code-onboarding-site/08-omc-guide/) | autopilot, learner, HUD, 실행 모드 |
-| | [09. 자동화의 힘](https://kwag93.github.io/claude-code-onboarding-site/09-automation/) | git, PR, 테스트, 코드 리뷰 자동화 |
+| | [09. 자동화의 힘](https://kwag93.github.io/claude-code-onboarding-site/09-automation/) | git, PR, 테스트, 코드 리뷰, /loop, Cron 자동화 |
 | | [24. GitLab CI/CD](https://kwag93.github.io/claude-code-onboarding-site/24-gitlab-cicd/) | CI/CD 파이프라인 통합, @claude 멘션 |
 | | [13. 파워 유저 팁](https://kwag93.github.io/claude-code-onboarding-site/13-power-user-tips/) | 70가지+ 실전 팁, 단축키, 자동화 |
 | **확장하기** | [20. 확장 기능 개요](https://kwag93.github.io/claude-code-onboarding-site/20-features-overview/) | 기능 비교표, 컨텍스트 비용, 조합 패턴 |
@@ -45,6 +45,7 @@ Claude Code를 처음 접하는 팀원이 실무에 적용할 수 있도록 만�
 | | [23. Chrome 확장 프로그램](https://kwag93.github.io/claude-code-onboarding-site/23-chrome-extension/) | 브라우저 자동화, 라이브 디버깅 |
 | | [25. Status Line](https://kwag93.github.io/claude-code-onboarding-site/25-statusline-guide/) | 하단 대시보드 커스터마이징 |
 | | [26. 키보드 단축키](https://kwag93.github.io/claude-code-onboarding-site/26-keybindings-guide/) | 커스텀 키바인딩, Vim 모드, Chords |
+| | [27. 보이스 모드](https://kwag93.github.io/claude-code-onboarding-site/27-voice-mode/) | 음성 코딩, Push-to-Talk, Hands-Free |
 | | [18. 추천 리소스](https://kwag93.github.io/claude-code-onboarding-site/18-resources/) | 공식 문서, 한국어 가이드, 커뮤니티 허브 |
 | **철학** | [12. AI와 함께 일하기](https://kwag93.github.io/claude-code-onboarding-site/12-ai-work-philosophy/) | 찾지 말고 물어보기, 메모리 관리 |
 | | [17. 흔한 실수 피하기](https://kwag93.github.io/claude-code-onboarding-site/17-anti-patterns/) | 8가지 안티패턴과 해결법 |
@@ -103,7 +104,7 @@ zensical build --clean
 ├── .github/workflows/deploy.yml   # 자동 배포 워크플로우
 ├── docs/
 │   ├── index.md                   # 홈페이지
-│   ├── 01-quick-start.md ~ 26-keybindings-guide.md (26개 문서)
+│   ├── 01-quick-start.md ~ 27-voice-mode.md (27개 문서)
 │   ├── 99-release-notes.md        # 버전 변경 내역
 │   ├── 404.md                     # 404 페이지
 │   └── stylesheets/extra.css      # 커스텀 스타일

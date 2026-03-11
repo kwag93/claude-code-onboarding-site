@@ -71,13 +71,13 @@
 | [03. 실무 워크플로우](./03-workflows.md) | 에이전트/스킬/훅, 스팟 SDK 예제 | 20분 |
 | [21. 모범 사례](./21-best-practices.md) | 컨텍스트 관리, 검증, 탐색→계획→코딩 | 15분 |
 | [15. CLAUDE.md 마스터하기](./15-claude-md-mastery.md) | 60줄 원칙, 3가지 계층, @import | 15분 |
-| [16. Hooks 실전 가이드](./16-hooks-practical.md) | 4가지 이벤트, 실전 레시피 5개 | 15분 |
+| [16. Hooks 실전 가이드](./16-hooks-practical.md) | 17가지 이벤트, 4가지 훅 타입, 실전 레시피 9개 | 20분 |
 | [06. 팀 세션 가이드](./06-agent-teams-cowork.md) | 팀 세션 구성, 서브에이전트 비교, 토큰 비용 | 15분 |
 | [19. 코워크 가이드](./19-cowork-guide.md) | 코워크 시작법, 엑셀/파워포인트 활용 | 15분 |
 | [22. 리모트 컨트롤](./22-remote-control.md) | 모바일/브라우저에서 세션 이어서 사용 | 10분 |
 | [07. 왜 CLI인가](./07-why-cli.md) | CLI 장점, 이미지 활용, 멀티 인스턴스 | 10분 |
 | [08. OMC 활용 가이드](./08-omc-guide.md) | autopilot, learner, HUD, 실행 모드 | 15분 |
-| [09. 자동화의 힘](./09-automation.md) | git, PR, 테스트, 코드 리뷰 자동화 | 15분 |
+| [09. 자동화의 힘](./09-automation.md) | git, PR, 테스트, 코드 리뷰, /loop, Cron 자동화 | 15분 |
 | [24. GitLab CI/CD](./24-gitlab-cicd.md) | CI/CD 파이프라인 통합, @claude 멘션 | 10분 |
 | [13. 파워 유저 팁](./13-power-user-tips.md) | 70가지+ 실전 팁, 단축키, 자동화 | 20분 |
 
@@ -91,6 +91,7 @@
 | [23. Chrome 확장 프로그램](./23-chrome-extension.md) | 브라우저 자동화, 라이브 디버깅 | 10분 |
 | [25. Status Line](./25-statusline-guide.md) | 하단 대시보드 커스터마이징, 셸 스크립트 예제 | 15분 |
 | [26. 키보드 단축키](./26-keybindings-guide.md) | 커스텀 키바인딩, Vim 모드, Chords | 10분 |
+| [27. 보이스 모드](./27-voice-mode.md) | 음성 코딩, Push-to-Talk, Hands-Free | 10분 |
 | [18. 추천 리소스](./18-resources.md) | 공식 문서, 한국어 가이드, 커뮤니티 허브 | 10분 |
 
 ### 철학
