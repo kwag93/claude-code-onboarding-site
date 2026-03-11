@@ -282,6 +282,25 @@ ctrl+k ctrl+s    Ctrl+K 누르고, 떼고, Ctrl+S
 | `diff:nextFile` | `Down` | 다음 파일 |
 | `diff:viewDetails` | `Enter` | 상세 보기 |
 
+### 레시피 5: 보이스 Push-to-Talk 키 변경
+
+보이스 모드의 Push-to-Talk 키를 스페이스바 대신 다른 키로 바꿔요.
+
+```json
+{
+  "bindings": [
+    {
+      "context": "Chat",
+      "bindings": {
+        "ctrl+m": "voice:pushToTalk"
+      }
+    }
+  ]
+}
+```
+
+> 보이스 모드에 대한 자세한 내용은 [27. 보이스 모드](./27-voice-mode.md)를 참고하세요.
+
 ---
 
 ## Vim 모드와의 관계

@@ -460,22 +460,36 @@ Hooks는 특정 이벤트 시 자동 실행되는 셸 명령어예요. AI의 확
 
 | Hook | 실행 시점 | 사용 사례 |
 |------|-----------|-----------|
+| `SessionStart` | 세션 시작 시 | 브랜치/이슈 컨텍스트 자동 주입 |
 | `PreToolUse` | 도구 실행 전 | 위험한 명령어 차단 |
-| `PostToolUse` | 도구 실행 후 | 로그 기록, 알림 |
-| `Notification` | 알림 시 | 외부 시스템 통합 |
+| `PostToolUse` | 도구 실행 후 | 자동 린팅, 로깅 |
+| `PostToolUseFailure` | 도구 실패 후 | 복구 힌트 제공 |
+| `PermissionRequest` | 권한 확인 시 | 안전한 명령 자동 허용 |
+| `Notification` | 알림 시 | Slack/Discord 연동 |
+| `Stop` | 작업 완료 시 | 최종 검증 게이트 |
+| `TaskCompleted` | 작업 완료 표시 시 | lint/test 통과 강제 |
 
 위험한 명령어 차단 예시:
 
 ```json
 {
   "hooks": {
-    "PreToolUse": {
-      "command": "bash",
-      "args": ["-c", "if echo $TOOL_INPUT | grep -q 'rm -rf /'; then echo 'BLOCKED'; exit 1; fi"]
-    }
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/block-dangerous.sh"
+          }
+        ]
+      }
+    ]
   }
 }
 ```
+
+4가지 훅 타입(command, http, prompt, agent)과 17가지 이벤트에 대한 자세한 내용은 [16. Hooks 실전 가이드](./16-hooks-practical.md)를 참고하세요.
 
 **가장 유용한 Hook: macOS 데스크톱 알림**
 
@@ -625,7 +639,28 @@ Level 6: Hooks (규칙 강제 자동화)
 
 > "같은 작업을 3번 이상 반복한다면, 자동화할 방법을 찾으세요. 그리고 그 자동화 과정 자체도 자동화하세요." — ykdojo
 
-### 24-1. /sandbox — 안전한 자율 모드
+### 24-1. /loop과 Cron — 반복 자동화
+
+**`/loop`**: 프롬프트를 일정 간격으로 반복 실행해요.
+
+```text
+# 5분마다 빌드 상태 확인
+/loop 5m "빌드 상태 확인하고 실패하면 수정해줘"
+
+# 10분마다 PR 모니터링 (기본 간격: 10분)
+/loop /commit
+```
+
+**Cron**: 스케줄 기반 자동화. Claude Code가 실행 중이지 않아도 동작해요.
+
+```text
+/cron
+> "매일 오전 9시에 어제 올라온 PR을 리뷰해줘"
+```
+
+`/loop`은 세션 내 반복, Cron은 세션 밖 스케줄링이에요. 상황에 맞게 쓰세요.
+
+### 24-2. /sandbox — 안전한 자율 모드
 
 `--dangerously-skip-permissions`가 불안하다면, `/sandbox`가 대안이에요.
 
@@ -641,7 +676,7 @@ Level 6: Hooks (규칙 강제 자동화)
 | `/sandbox` | 격리된 환경 | 즉시 사용 | 실험, 프로토타입 |
 | `--dangerously-skip-permissions` | 없음 | 최고 | 컨테이너 안에서만 |
 
-### 24-2. Boris Cherny(Claude Code 창시자)의 습관
+### 24-3. Boris Cherny(Claude Code 창시자)의 습관
 
 [howborisusesclaudecode.com](https://howborisusesclaudecode.com)에서 선별한 핵심 5가지:
 

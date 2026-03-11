@@ -275,5 +275,5 @@ CLAUDE.md 작성법을 익혔다면 [16. Hooks 실전 가이드](./16-hooks-prac
 
 **참고 자료**:
 
-- [CLAUDE.md 공식 문서](https://docs.anthropic.com/ko/docs/claude-code/memory)
+- [CLAUDE.md 공식 문서](https://code.claude.com/docs/en/memory)
 - [13. 파워 유저 가이드](./13-power-user-tips.md) — CLAUDE.md와 Skills/Commands 비교

@@ -118,6 +118,70 @@ Claude Code에서 에이전트 여럿을 팀으로 묶어 병렬로 돌리는 �
 
 ---
 
+## Hooks로 팀 품질 관리
+
+팀 세션에 **Hooks**를 결합하면 품질 게이트를 자동화할 수 있어요.
+
+### TeammateIdle — 팀원 유휴 방지
+
+팀원이 할 일 없이 멈추려 할 때, 추가 작업을 자동 할당해요.
+
+```json
+{
+  "hooks": {
+    "TeammateIdle": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '아직 미완료 작업이 있습니다. 작업 목록을 확인하세요.'"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+### TaskCompleted — 완료 전 품질 게이트
+
+팀원이 작업 완료를 선언할 때, lint/test를 통과해야만 허용해요.
+
+```json
+{
+  "hooks": {
+    "TaskCompleted": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/quality-gate.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+```bash
+#!/bin/bash
+# .claude/hooks/quality-gate.sh
+if ! pnpm lint 2>/dev/null; then
+  echo '{"decision": "block", "reason": "lint 에러가 있습니다."}'
+  exit 0
+fi
+
+if ! pnpm test:run 2>/dev/null; then
+  echo '{"decision": "block", "reason": "테스트 실패."}'
+  exit 0
+fi
+```
+
+> Hooks와 팀 세션을 함께 쓰면 "사람이 안 봐도 품질이 유지되는" 자동화된 팀 워크플로우를 만들 수 있어요. 자세한 내용은 [16. Hooks 실전 가이드](./16-hooks-practical.md)를 참고하세요.
+
+---
+
 ## 팀 적용 체크리스트
 
 - [ ] 팀 세션 역할(분석/구현/검증) 템플릿을 정했는가?
