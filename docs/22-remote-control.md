@@ -104,17 +104,32 @@ https://claude.ai/code?session=abc123def456
 
 ---
 
-## Remote Control vs 웹 Claude Code
+## Remote Control vs Claude Code on the web
 
-| 항목 | Remote Control | 웹 Claude Code |
+헷갈리기 쉬운 두 기능이에요. 이름은 비슷하지만 완전히 달라요.
+
+| 항목 | Remote Control | Claude Code on the web |
 |------|---------------|----------------|
 | **실행 위치** | 내 컴퓨터 | Anthropic 클라우드 |
-| **로컬 MCP** | ✅ | ❌ |
-| **도구 접근** | ✅ 전부 | ❌ 제한 |
-| **언제** | 진행 중인 작업 이어갈 때 | 새 작업 빠르게 시작할 때 |
-| **요금제** | Pro/Max | 전 플랜 |
+| **시작 방법** | `/rc` 또는 `claude remote-control` | `claude --remote` 또는 claude.ai/code |
+| **로컬 MCP** | ✅ 그대로 사용 | ❌ |
+| **로컬 파일 접근** | ✅ 전부 | ❌ GitHub 연동 기반 |
+| **언제 쓰나** | 터미널 세션을 폰/다른 PC에서 이어갈 때 | 로컬 없이 클라우드에서 새 작업 시작할 때 |
+| **요금제** | Pro/Max | Enterprise/Team/Max/Pro (research preview) |
 
-MCP 쓰거나 이미 터미널에서 실행 중이면 Remote Control, 그냥 새 대화 시작하는 거면 웹이 더 편해요.
+**Remote Control**: 내 컴퓨터가 계속 돌아가고 있어야 해요. 원격 조종하는 방식.
+
+**Claude Code on the web**: 로컬 터미널 없어도 돼요. GitHub 연동하면 클라우드에서 직접 돌아가요. `--remote` 플래그로 웹 세션을 터미널로 "텔레포트"해 이어갈 수도 있어요.
+
+```bash
+# 웹 세션으로 시작하기
+claude --remote
+
+# 실행 중인 웹 세션을 로컬로 가져오기 (텔레포트)
+# claude.ai/code 세션 화면에서 "Continue in terminal" 선택
+```
+
+MCP 쓰거나 로컬 환경이 필요하면 Remote Control, 로컬 없이 빠르게 새 작업을 시작하거나 병렬로 여러 작업을 돌리고 싶으면 Claude Code on the web이에요.
 
 ---
 
