@@ -88,6 +88,12 @@ humanizer 스킬은 **언어학 연구 기반**(KatFishNet 논문, 94.88% AUC)�
 
 ## 스킬 찾기와 설치
 
+### Agent Skills 개방형 표준
+
+스킬 생태계가 하나의 공개 표준으로 통합됐어요. [agentskills.io](https://agentskills.io)가 그 중심입니다.
+
+Claude Code뿐 아니라 Cursor, Copilot, Codex, Gemini CLI, JetBrains Junie, Roo Code 등 **30+ 도구가 같은 SKILL.md 포맷**을 씁니다. 한 번 만들면 어디서든 쓸 수 있어요.
+
 ### 1. Anthropic 공식 스킬 (추천)
 
 Anthropic이 직접 만든 공식 스킬 저장소예요. **가장 안전하고 검증된** 스킬입니다.
@@ -117,6 +123,36 @@ Anthropic이 직접 만든 공식 스킬 저장소예요. **가장 안전하고 
 npx ctx7 skills install <owner/repo>
 ```
 
+### 3. agentskill.sh (가장 큰 디렉토리)
+
+110,000+ 스킬, 보안 점수까지 제공하는 최대 규모 마켓플레이스예요.
+
+- [agentskill.sh](https://agentskill.sh/)
+- 카테고리: Development(82k+), Operations(12k+), Data(10k+), Product(6k+) 등
+- 스킬마다 보안 점수(Security Score) 제공
+
+```text
+# Claude Code에서 바로 설치
+/learn @owner/skill-name
+```
+
+### 4. skillsdirectory.com
+
+36,000+ 스킬, 보안 스캔이 기본 적용돼 있어요.
+
+- [skillsdirectory.com](https://skillsdirectory.com/)
+- 전체 스킬의 36%에서 보안 결함 탐지 → **검증된 스킬만 추천**
+
+```bash
+npm install -g openskills
+```
+
+### 5. LobeHub Marketplace
+
+100,000+ 스킬, 웹에서 미리보기 가능합니다.
+
+- [lobehub.com/skills](https://lobehub.com/skills)
+
 ### 주요 메트릭
 
 | 지표 | 의미 | 확인 포인트 |
@@ -141,7 +177,7 @@ npx ctx7 skills install <owner/repo>
 
 **안전한 순서**: Anthropic 공식 → Trust Score 높은 커뮤니티 → 직접 만들기
 
-### 3. OMC 스킬 관리
+### 6. OMC 스킬 관리
 
 ```text
 # 설치된 스킬 목록
@@ -153,6 +189,43 @@ npx ctx7 skills install <owner/repo>
 # 스킬 검색
 /oh-my-claudecode:skill search [키워드]
 ```
+
+---
+
+## 기존 스킬 찾아서 개선하기
+
+처음부터 만들지 마세요. 비슷한 스킬이 이미 있을 가능성이 높아요.
+
+**워크플로우**: 검색 → 평가 → 포크 → 커스터마이즈 → 테스트 → 공유
+
+```text
+# 1. 필요한 스킬 검색
+agentskill.sh에서 "code review" 검색
+또는 Claude에게 직접 물어보기:
+> 코드 리뷰 관련 스킬 있어?
+
+# 2. 보안 점수와 설치 수 확인
+Security Score 80+ 이면 안전
+Weekly Installs 높을수록 검증됨
+
+# 3. 설치 후 커스터마이즈
+/learn @anthropics/skill-creator
+→ SKILL.md를 내 프로젝트에 맞게 수정
+
+# 4. 팀 저장소에 공유
+.claude/skills/ 에 저장 → git push
+```
+
+Anthropic 공식 `skill-creator` 스킬을 쓰면 스킬을 만들고, 수정하고, 품질까지 평가해줘요. 스킬을 위한 메타 스킬입니다.
+
+### 스킬 품질 평가 기준
+
+| 기준 | 좋은 스킬 | 나쁜 스킬 |
+| --- | --- | --- |
+| **Security Score** | 80+ | 50 미만 |
+| **description** | 구체적, 트리거 조건 명확 | 모호, 너무 넓음 |
+| **크기** | SKILL.md 500줄 이하 | 거대한 단일 파일 |
+| **도구 제한** | allowed-tools 명시 | 제한 없음 |
 
 ---
 
@@ -426,6 +499,9 @@ git push
 - [Claude Code 공식 스킬 문서](https://code.claude.com/docs/ko/skills) - 스킬 2.0 전체 레퍼런스
 - [Anthropic 공식 스킬](https://github.com/anthropics/skills) - 검증된 공식 스킬 저장소
 - [Context7 스킬 디렉토리](https://context7.com/skills) - 커뮤니티 스킬 검색 (Trust Score 확인 필수)
-- [Agent Skills 표준 스펙](https://agentskills.io) - 스킬 작성 표준
+- [Agent Skills 표준](https://agentskills.io) - 개방형 스킬 표준 스펙
+- [agentskill.sh](https://agentskill.sh/) - 110,000+ 스킬 디렉토리
+- [skillsdirectory.com](https://skillsdirectory.com/) - 보안 검증 스킬 디렉토리
+- [LobeHub Marketplace](https://lobehub.com/skills) - 100,000+ 스킬 마켓
 - [humanizer 스킬](https://github.com/blader/humanizer) - AI 글 자연화
 - [oh-my-claudecode 스킬 가이드](https://github.com/Yeachan-Heo/oh-my-claudecode)
