@@ -4,6 +4,37 @@
 
 ---
 
+## v1.8.0 (2026-03-23)
+
+**대규모 콘텐츠 개편: 새 기능 + 철학 강화 + 실전 가이드**
+
+### 새 문서 추가 (4개)
+
+- **[Channels](28-channels.md)**: 외부 이벤트를 Claude Code 세션으로 푸시하는 채널 기능 (단방향/양방향, 웹훅 예제, 권한 릴레이, 센더 게이팅)
+- **[멀티 모델 협업](29-multi-model.md)**: Claude, Codex, Gemini를 함께 활용하는 방법 (/ask, /ccg, 합의 기반 의사결정 패턴)
+- **[학습 기능 활용하기](30-learning-features.md)**: Learner, Insights, Memory 계층 통합 가이드 (잘못된 학습 바로잡기 포함)
+- **[직접 만들기](31-build-your-own.md)**: 나만의 스킬/플러그인/채널/MCP 서버 만들기 튜토리얼 (spot-orbit-plugin 실전 사례 포함)
+
+### 기존 문서 보강
+
+- **[자동화의 힘](09-automation.md)**: /loop 간격 구문 상세화, Cron 섹션 대폭 확장 (일회성 리마인더, CronCreate/List/Delete 도구, 세션 범위 스케줄링, Jitter, Cron 표현식 참조, tmux 세션 유지 팁). 잘못된 정보("실행 중이지 않아도 동작") 수정
+- **[AI 마인드셋](02-ai-mindset.md)**: Anthropic RCT 연구 결과 추가 (AI 보조 그룹 50% vs 대조군 67%, 디버깅 격차, 인지적 노력의 중요성)
+- **[AI와 함께 일하는 방법](12-ai-work-philosophy.md)**: RCT 연구와 "갈군다" 패턴의 연결 블록쿼트 추가
+- **[흔한 실수 피하기](17-anti-patterns.md)**: 실수 3개 추가 (컨텍스트 오염, /clear 타이밍, HANDOFF.md 활용). Status Line 교차 링크 포함
+- **[스킬과 플러그인](11-skills-plugins.md)**: spot-orbit-plugin 실전 사례 참조 추가
+
+### 네비게이션 개선
+
+- "실무 가이드"에 **멀티 모델 협업** 추가 (OMC 가이드 다음)
+- "확장하기"에 **학습 기능**, **직접 만들기**, **Channels** 3개 문서 추가
+- 학습 기능을 "확장하기" 앞쪽에 배치 (Gemini 리뷰 반영: 실용적 기능이므로 철학보다 확장에 적합)
+
+### 리뷰
+
+- Gemini CLI 리뷰 피드백 7개 항목 반영 (비용/한계 경고, 잘못된 학습 바로잡기, 트러블슈팅 등)
+
+---
+
 ## v1.7.0 (2026-03-03)
 
 **빌드 시스템 마이그레이션: MkDocs Material → Zensical**

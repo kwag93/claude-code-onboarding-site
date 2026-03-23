@@ -387,6 +387,8 @@ Claude: "다음 패턴을 스킬로 등록할 수 있습니다:
 
 ## 직접 플러그인 만들기
 
+> 💡 **실전 사례**: [spot-orbit-plugin](https://github.com/kwag93/spot-orbit-plugin)은 Boston Dynamics Spot/Orbit API 개발을 위해 만든 Claude Code 플러그인이에요. MCP 서버로 API에 직접 접근하고, PreToolUse Hook으로 안전 가드레일을 설정하고, 32개 참조 문서로 도메인 지식을 제공합니다. 이런 수준의 플러그인을 직접 만들고 싶다면 [직접 만들기 가이드](31-build-your-own.md)를 참고하세요.
+
 스킬보다 더 복잡한 게 필요하면 **플러그인**을 만들 수도 있어요.
 
 ### 플러그인 vs 스킬
