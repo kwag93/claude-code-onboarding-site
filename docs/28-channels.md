@@ -1,6 +1,6 @@
 # 28. Channels — 외부 이벤트를 Claude Code로
 
-Claude Code 세션에 외부 이벤트를 밀어 넣을 수 있는 Channels 기능이에요.
+외부 이벤트를 Claude Code 세션으로 밀어 넣는 기능이에요.
 
 > "터미널 밖에서 일어나는 일을 Claude가 실시간으로 알 수 있다면?"
 
@@ -9,7 +9,7 @@ Claude Code 세션에 외부 이벤트를 밀어 넣을 수 있는 Channels 기�
 ## Channels이란?
 
 Channel은 **MCP 서버**가 Claude Code 세션에 이벤트를 푸시하는 메커니즘이에요.
-CI가 실패했을 때, Slack에서 메시지가 왔을 때, 모니터링 알림이 뜰 때 — Claude가 자동으로 반응할 수 있습니다.
+CI 실패, Slack 메시지, 모니터링 알림 등에 Claude가 자동으로 반응할 수 있어요.
 
 > ⚠️ Channels은 **리서치 프리뷰** 상태이며 Claude Code v2.1.80 이상이 필요해요.
 > claude.ai 로그인이 필요하고, Console/API 키 인증은 지원되지 않습니다.
@@ -35,7 +35,7 @@ Claude Code 세션
 채널 서버 → 외부 시스템
 ```
 
-채널 서버는 로컬에서 실행되며, Claude Code가 서브프로세스로 관리해요.
+채널 서버는 로컬에서 실행되고 Claude Code가 서브프로세스로 관리해요.
 
 ---
 
@@ -63,7 +63,7 @@ claude --channels plugin:telegram@anthropic,plugin:discord@anthropic
 
 ## 웹훅 수신기 만들기 (예제)
 
-가장 간단한 단방향 채널을 직접 만들어 봅시다. CI 파이프라인이나 모니터링 시스템의 웹훅을 Claude에게 전달하는 서버예요.
+가장 간단한 단방향 채널을 직접 만들어봐요. CI 파이프라인이나 모니터링 웹훅을 Claude에게 전달하는 서버예요.
 
 ### 1단계: 프로젝트 생성
 
@@ -111,9 +111,9 @@ Bun.serve({
 })
 ```
 
-핵심 3가지:
+핵심 포인트:
 1. `claude/channel` capability → Claude Code에 채널로 등록
-2. `instructions` → Claude의 시스템 프롬프트에 추가
+2. `instructions` → Claude 시스템 프롬프트에 추가
 3. `mcp.notification()` → 이벤트를 Claude에게 전달
 
 ### 3단계: MCP 설정에 등록
@@ -203,7 +203,7 @@ instructions: '메시지가 <channel source="webhook" chat_id="...">로 도착�
 
 ## 권한 릴레이 (Permission Relay)
 
-양방향 채널은 **도구 승인 요청을 원격으로 전달**할 수 있어요. 예를 들어 모바일에서 "이 Bash 명령 실행해도 돼?"라는 질문에 승인/거부할 수 있습니다.
+양방향 채널은 **도구 승인 요청을 원격으로 전달**할 수 있어요. 모바일에서 "이 Bash 명령 실행해도 돼?"라는 질문에 승인/거부하는 식으로 활용해요.
 
 > v2.1.81 이상 필요
 
@@ -233,7 +233,7 @@ capabilities: {
 
 ## 센더 게이팅 (보안)
 
-게이팅 없는 채널은 **프롬프트 인젝션 벡터**예요. 엔드포인트에 접근할 수 있는 누구나 Claude에게 텍스트를 전달할 수 있습니다.
+게이팅 없는 채널은 **프롬프트 인젝션 벡터**예요. 엔드포인트에 접근할 수 있다면 누구나 Claude에게 텍스트를 보낼 수 있어요.
 
 ### allowlist 기반 발신자 확인
 
