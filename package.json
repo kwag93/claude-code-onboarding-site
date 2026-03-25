@@ -1,0 +1,10 @@
+{
+  "name": "claude-code-onboarding-site",
+  "version": "0.0.0-semantically-released",
+  "private": true,
+  "description": "Claude Code 온보딩 가이드 — semantic-release 전용",
+  "devDependencies": {
+    "semantic-release": "^24.0.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0"
+  }
+}

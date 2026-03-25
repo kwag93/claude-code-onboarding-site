@@ -18,6 +18,9 @@ venv/
 .venv/
 .env
 
+# Node.js (semantic-release)
+node_modules/
+
 # MkDocs 빌드 결과
 site/
 
