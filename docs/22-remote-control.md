@@ -202,11 +202,11 @@ claude remote-control --verbose
 
 ## 다음 단계
 
-팀원과 본격적으로 협업하고 싶다면 [06. 에이전트 팀 협업](./06-agent-teams-cowork.md)에서 대규모 작업 조율 방법을 봐보세요.
+팀원과 본격적으로 협업하고 싶다면 [06. 팀 세션 가이드](./06-agent-teams-cowork.md)에서 대규모 작업 조율 방법을 봐보세요.
 
 ---
 
 **참고 자료**:
 
-- [Claude Code 공식 문서 - Remote Control](https://code.claude.com/docs/remote-control)
-- [Claude Code FAQ](https://code.claude.com/docs/faq)
+- [Claude Code 공식 문서 - Remote Control](https://code.claude.com/docs/en/remote-control)
+- [Claude Code FAQ](https://code.claude.com/docs/en/faq)

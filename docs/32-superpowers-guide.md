@@ -183,7 +183,7 @@ RED-GREEN-REFACTOR 사이클을 강제합니다.
 
 ---
 
-## OMCC vs Superpowers: 어떤 도구를 선택할까
+## OMC vs Superpowers: 어떤 도구를 선택할까
 
 두 도구 모두 Claude Code를 강화하지만, **해결하는 문제가 다릅니다.**
 
@@ -195,7 +195,7 @@ RED-GREEN-REFACTOR 사이클을 강제합니다.
 | **적합한 상황** | 빠르게 여러 작업을 처리할 때 | 품질이 중요한 기능 개발·버그 수정 |
 | **GitHub Stars** | 4.9k+ | 110k+ |
 
-### 이럴 때 OMCC
+### 이럴 때 OMC
 
 - autopilot으로 아이디어 → 완성까지 한 번에 돌리고 싶을 때
 - 여러 독립 작업을 최대 병렬로 처리할 때
@@ -213,7 +213,7 @@ RED-GREEN-REFACTOR 사이클을 강제합니다.
 
 - 비슷한 기능의 스킬이 동시에 자동 트리거돼서 이중 실행될 수 있음
 - hooks 설정이 서로 덮어쓸 수 있음
-- Superpowers의 "모든 작업 전 스킬 확인" 규율이 OMCC의 autopilot 흐름과 충돌
+- Superpowers의 "모든 작업 전 스킬 확인" 규율이 OMC의 autopilot 흐름과 충돌
 
 > 하나를 골라서 익숙해진 뒤, 필요하면 다른 쪽을 시도해보세요.
 
@@ -232,4 +232,4 @@ Superpowers의 워크플로우를 이해했다면 [09. 자동화의 힘](./09-au
 - [Superpowers GitHub](https://github.com/obra/superpowers) — 소스 코드와 전체 문서
 - [Superpowers 블로그](https://blog.fsck.com/2025/10/09/superpowers/) — 제작자의 설계 철학과 배경
 - [Superpowers Discord](https://discord.gg/Jd8Vphy9jq) — 커뮤니티 지원
-- [oh-my-claudecode 가이드](./08-omc-guide.md) — OMCC가 궁금하다면
+- [oh-my-claudecode 가이드](./08-omc-guide.md) — OMC가 궁금하다면

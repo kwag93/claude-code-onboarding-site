@@ -1,5 +1,8 @@
 # 24. GitLab CI/CD에서 Claude Code 활용하기
 
+!!! warning "베타 기능"
+    GitLab CI/CD 통합은 아직 베타예요. 프로덕션에 붙이기 전에 충분히 테스트해보세요.
+
 GitLab CI/CD에 Claude Code를 연결하면 이슈를 코드로 바꾸고, MR 검토를 자동화할 수 있어요.
 
 ---
@@ -387,6 +390,4 @@ Error: ANTHROPIC_API_KEY not found
 
 ---
 
-> **⚠️ 베타 기능**
->
-> GitLab CI/CD 통합은 아직 베타예요. 프로덕션에 붙이기 전에 충분히 테스트해보세요.
+> GitLab CI/CD 통합에 대한 최신 정보는 [공식 문서](https://code.claude.com/docs/ko/gitlab-ci-cd)를 참고하세요.

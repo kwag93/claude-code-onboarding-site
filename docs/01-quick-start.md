@@ -133,9 +133,9 @@ diff 확인 후 커밋 메시지까지 작성해줘요.
 | 기능                     | 설명                                                                              |
 | ------------------------ | --------------------------------------------------------------------------------- |
 | **5가지 실행 모드**      | Autopilot(자율), Ultrapilot(병렬), Swarm(협업), Pipeline(순차), Ecomode(토큰절약) |
-| **32개 전문 에이전트**   | 분석, 실행, 설계, 검토 등 도메인별 전문가                                         |
-| **37개 스킬**            | 자동화, 최적화, 학습 기능 내장                                                    |
-| **31개 라이프사이클 훅** | 상황별 자동 대응                                                                  |
+| **전문 에이전트**        | 분석, 실행, 설계, 검토 등 도메인별 전문가                                         |
+| **스킬**                 | 자동화, 최적화, 학습 기능 내장                                                    |
+| **라이프사이클 훅**      | 상황별 자동 대응                                                                  |
 | **토큰 30-50% 절약**     | 스마트 모델 라우팅                                                                |
 
 ### 설치 방법
@@ -181,12 +181,15 @@ diff 확인 후 커밋 메시지까지 작성해줘요.
 Context7은 라이브러리 최신 문서를 실시간으로 땡겨오는 MCP 서버예요.
 
 ```bash
-# ~/.claude.json에 추가
+# CLI로 추가 (권장)
+claude mcp add context7 -- npx -y @upstash/context7-mcp
+
+# 또는 프로젝트 루트의 .mcp.json에 수동 추가
 {
   "mcpServers": {
     "context7": {
       "command": "npx",
-      "args": ["-y", "@context7/mcp-server"]
+      "args": ["-y", "@upstash/context7-mcp"]
     }
   }
 }
@@ -260,4 +263,4 @@ FastAPI 0.115 버전의 변경사항 알려줘
 **참고 자료**:
 
 - [oh-my-claudecode GitHub](https://github.com/Yeachan-Heo/oh-my-claudecode)
-- [Claude Code 공식 문서](https://code.claude.com/docs/en/overview)
+- [Claude Code 공식 문서](https://code.claude.com/docs/ko/overview)
