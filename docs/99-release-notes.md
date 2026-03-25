@@ -4,6 +4,16 @@
 
 ---
 
+## v1.8.2 (2026-03-25)
+
+**Computer Use 가이드 추가**
+
+### 새 문서
+
+- **[33. Computer Use](33-computer-use.md)**: Claude API의 Computer Use Tool 개요. 데스크톱 자율 제어(스크린샷/마우스/키보드), 에이전트 루프 패턴, 실행 환경 구성, 보안 고려사항, Chrome 확장과의 비교
+
+---
+
 ## v1.8.1 (2026-03-25)
 
 **Superpowers 활용 가이드 추가**
