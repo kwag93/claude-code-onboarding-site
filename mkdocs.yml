@@ -67,6 +67,7 @@ nav:
       - 리모트 컨트롤: 22-remote-control.md
       - 왜 CLI인가: 07-why-cli.md
       - OMC 활용 가이드: 08-omc-guide.md
+      - Superpowers 활용 가이드: 32-superpowers-guide.md
       - 멀티 모델 협업: 29-multi-model.md
       - 자동화의 힘: 09-automation.md
       - GitLab CI/CD: 24-gitlab-cicd.md
