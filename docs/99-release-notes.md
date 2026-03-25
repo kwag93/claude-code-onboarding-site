@@ -29,7 +29,11 @@ v1.9.0부터 [GitHub Releases](https://github.com/kwag93/claude-code-onboarding-
 
 ### v1.7.0 (2026-03-03)
 
-**빌드 시스템 마이그레이션: MkDocs Material → Zensical**
+**빌드 시스템 마이그레이션 + 보이스 모드 가이드 추가**
+
+### 새 문서 추가
+
+- **[27. 보이스 모드](27-voice-mode.md)**: Claude Code 공식 보이스 모드(`/voice`) 가이드. 2026년 3월 3일 5% 점진적 롤아웃 시작, 전면 배포 완료. push-to-talk 음성 코딩, 활용 시나리오, 트러블슈팅
 
 ### v1.6.0 (2026-03-02)
 

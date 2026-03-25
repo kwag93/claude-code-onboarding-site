@@ -47,10 +47,10 @@ Context7이 **라이브러리 최신 버전 문서와 코드 예제**를 실시�
 ### 설치 방법
 
 ```bash
-# Claude Code에서 직접 추가
+# Claude Code에서 직접 추가 (권장)
 claude mcp add context7 -- npx -y @upstash/context7-mcp
 
-# 또는 ~/.claude.json에 수동 추가
+# 또는 프로젝트 루트의 .mcp.json에 수동 추가
 {
   "mcpServers": {
     "context7": {
@@ -396,7 +396,7 @@ uvx mcp-atlassian
 
 ## MCP 설정 한눈에 보기
 
-### 전체 설정 예시 (~/.claude.json)
+### 전체 설정 예시 (.mcp.json)
 
 ```json
 {
