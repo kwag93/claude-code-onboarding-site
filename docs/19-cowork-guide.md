@@ -116,6 +116,9 @@ Claude: "라이브 데모가 설명을 이깁니다.
 
 ---
 
+!!! info "Claude Code와 별개 기능"
+    아래 엑셀/파워포인트 기능은 Claude Code가 아닌 **Microsoft 365 Add-in**으로 제공됩니다. Claude Desktop의 코워크와는 별도로, 오피스 앱 내에서 직접 Claude를 활용하는 방법입니다.
+
 ## 엑셀에서 Claude: 실전 가이드
 
 ### 1) 설치

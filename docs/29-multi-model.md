@@ -60,27 +60,30 @@ Claude Code 안에서 다른 모델에게 바로 질문할 수 있어요. `/ask`
 
 oh-my-claudecode의 /ask 외에도 각 모델 CLI를 직접 사용할 수 있어요.
 
-### Codex CLI
+### Codex CLI (OpenAI)
 
 ```bash
-# 설치
+# 설치 — 공식 문서에서 최신 설치 방법을 확인하세요
+# https://github.com/openai/codex
 npm install -g @openai/codex
 
 # 파이프로 코드 전달
 cat src/auth/token.ts | codex -q "이 코드의 엣지 케이스를 찾아줘"
 ```
 
-### Gemini CLI
+### Gemini CLI (Google)
 
 ```bash
-# 설치
-npm install -g @anthropic-ai/gemini-cli  # 또는 공식 설치 방법 확인
+# 설치 — Google 공식 패키지입니다
+npm install -g @google/gemini-cli
 
 # 파이프로 코드 전달
 cat src/auth/token.ts | gemini -p "이 코드의 아키텍처를 리뷰해줘"
 ```
 
 > CLI를 직접 사용하면 더 세밀한 제어가 가능하지만, Claude Code 컨텍스트가 전달되지 않아요. 프로젝트 맥락이 필요하면 /ask를 사용하세요.
+>
+> **주의**: CLI 도구들은 자주 업데이트됩니다. 설치 전에 각 도구의 공식 저장소에서 최신 설치 방법을 확인하세요.
 
 ---
 

@@ -108,7 +108,7 @@ API 없이 직접 웹 앱에 접근
 
 ### 1단계: Chrome 확장 설치
 
-[Claude in Chrome - Chrome 웹스토어](https://chromewebstore.google.com/)에서 공식 확장을 설치하세요.
+[Claude in Chrome - Chrome 웹스토어](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn)에서 공식 확장을 설치하세요.
 
 ### 2단계: Claude Code에서 활성화
 
@@ -391,7 +391,7 @@ Chrome 통합은 **Pro 플랜 이상**에서만 돼요. `/usage`로 현재 플�
 
 | 자료 | 링크 |
 |------|------|
-| Claude in Chrome - 공식 | [Chrome 웹스토어](https://chromewebstore.google.com/) |
+| Claude in Chrome - 공식 | [Chrome 웹스토어](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn) |
 | Claude Code 공식 문서 | [code.claude.com/docs](https://code.claude.com/docs/) |
 | Chrome 확장 권한 가이드 | [developer.chrome.com/extensions](https://developer.chrome.com/docs/extensions/) |
-| 관련 가이드 | [라이브 디버깅과 테스트](./06-agent-teams-cowork.md) |
+| 관련 가이드 | [모범 사례](./21-best-practices.md) |
