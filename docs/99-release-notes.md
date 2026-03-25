@@ -4,6 +4,22 @@
 
 ---
 
+## v1.8.1 (2026-03-25)
+
+**Superpowers 활용 가이드 추가**
+
+### 새 문서
+
+- **[32. Superpowers 활용 가이드](32-superpowers-guide.md)**: 개발 방법론 프레임워크 소개. brainstorming → plan → TDD → review 7단계 워크플로우, 주요 스킬 소개, OMCC와의 비교/선택 가이드
+
+### 기존 문서 업데이트
+
+- **[08. OMC 활용 가이드](08-omc-guide.md)**: 다음 단계에 Superpowers 상호 링크 추가
+- **index.md**: 실무 가이드 테이블, 핵심 리소스에 Superpowers 추가
+- **README.md**: 문서 테이블, 학습 순서, 프로젝트 구조 업데이트
+
+---
+
 ## v1.8.0 (2026-03-23)
 
 **대규모 콘텐츠 개편: 새 기능 + 철학 강화 + 실전 가이드**

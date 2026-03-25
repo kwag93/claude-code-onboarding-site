@@ -77,6 +77,7 @@
 | [22. 리모트 컨트롤](./22-remote-control.md) | 모바일/브라우저에서 세션 이어서 사용 | 10분 |
 | [07. 왜 CLI인가](./07-why-cli.md) | CLI 장점, 이미지 활용, 멀티 인스턴스 | 10분 |
 | [08. OMC 활용 가이드](./08-omc-guide.md) | autopilot, learner, HUD, 실행 모드 | 15분 |
+| [32. Superpowers 활용 가이드](./32-superpowers-guide.md) | TDD 강제, 체계적 워크플로우, 품질 규율 | 10분 |
 | [09. 자동화의 힘](./09-automation.md) | git, PR, 테스트, 코드 리뷰, /loop, Cron 자동화 | 15분 |
 | [24. GitLab CI/CD](./24-gitlab-cicd.md) | CI/CD 파이프라인 통합, @claude 멘션 | 10분 |
 | [13. 파워 유저 팁](./13-power-user-tips.md) | 70가지+ 실전 팁, 단축키, 자동화 | 20분 |
@@ -131,6 +132,7 @@
     ---
 
     - [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) - 멀티 에이전트 오케스트레이션
+    - [Superpowers](https://github.com/obra/superpowers) - 개발 방법론 프레임워크
     - [humanizer](https://github.com/blader/humanizer) - AI 글을 자연스럽게
     - [Agent Skills 디렉토리](https://agent-skills.md) - 커뮤니티 스킬 모음
 

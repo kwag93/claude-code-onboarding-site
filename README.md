@@ -36,6 +36,7 @@ Claude Code를 처음 접하는 팀원이 실무에 적용할 수 있도록 만�
 | | [22. 리모트 컨트롤](https://kwag93.github.io/claude-code-onboarding-site/22-remote-control/) | 모바일/브라우저에서 세션 이어서 사용 |
 | | [07. 왜 CLI인가](https://kwag93.github.io/claude-code-onboarding-site/07-why-cli/) | CLI 장점, 이미지 활용, 멀티 인스턴스 |
 | | [08. OMC 활용 가이드](https://kwag93.github.io/claude-code-onboarding-site/08-omc-guide/) | autopilot, learner, HUD, 실행 모드 |
+| | [32. Superpowers 활용 가이드](https://kwag93.github.io/claude-code-onboarding-site/32-superpowers-guide/) | TDD 강제, 체계적 워크플로우, 품질 규율 |
 | | [29. 멀티 모델 협업](https://kwag93.github.io/claude-code-onboarding-site/29-multi-model/) | /ask, /ccg, Claude+Codex+Gemini 합의 기반 의사결정 |
 | | [09. 자동화의 힘](https://kwag93.github.io/claude-code-onboarding-site/09-automation/) | git, PR, 테스트, 코드 리뷰, /loop, Cron 스케줄링 |
 | | [24. GitLab CI/CD](https://kwag93.github.io/claude-code-onboarding-site/24-gitlab-cicd/) | CI/CD 파이프라인 통합, @claude 멘션 |
@@ -63,7 +64,7 @@ Claude Code를 처음 접하는 팀원이 실무에 적용할 수 있도록 만�
 ```
 1일차 (40분)   환경 구축 + 관점 전환     → 01, 14, 02
 2일차 (40분)   실무 적용                 → 03, 05, 21
-3일차 (80분)   심화 기능                 → 07, 08, 29, 09, 15, 16
+3일차 (80분)   심화 기능                 → 07, 08, 32, 29, 09, 15, 16
 4일차 (50분)   확장 + 습관화             → 06, 19, 10, 11, 30, 17
 5일차 (50분)   고급 기능 + 직접 만들기   → 20, 22, 23, 24, 25, 26, 28, 31
 ```
@@ -108,7 +109,7 @@ zensical build --clean
 ├── .github/workflows/deploy.yml   # 자동 배포 워크플로우
 ├── docs/
 │   ├── index.md                   # 홈페이지
-│   ├── 01-quick-start.md ~ 31-build-your-own.md (31개 문서)
+│   ├── 01-quick-start.md ~ 32-superpowers-guide.md (32개 문서)
 │   ├── 99-release-notes.md        # 버전 변경 내역
 │   ├── 404.md                     # 404 페이지
 │   └── stylesheets/extra.css      # 커스텀 스타일
